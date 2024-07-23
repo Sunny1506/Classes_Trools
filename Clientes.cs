@@ -1,33 +1,38 @@
-public class Clientes 
+namespace modelos;
 {
-    string Nome;
+public class Clientes 
+  {
+    string NomedoCliente;
     int64 id;
-    public void SetNome (string Nome)
+    public void SetNomedoCliente (string NomedoCliente)
      {
-        this.Nome = Nome 
+        this.NomedoCliente = NomedoCliente 
      }
-    public string GetNome()
+    public string GetNomedoCliente()
      {
-        return Nome;
+        return NomedoCliente;
      }
-     int Telefone;
-    public void SetTelefone (int Telefone)
+// ------------------------------------------------------------------------------     
+    string Telefone;
+    public void SetTelefone (string Telefone)
      {
         this.Telefone = Telefone
      }
-    public int GetTelefone()
+    public string GetTelefone()
      {
         return Telefone;
      }
-      int CNPJ;
-    public void SetCNPJ (int CNPJ)
+// -------------------------------------------------------------------------------
+      string CNPJ;
+    public void SetCNPJ (string CNPJ)
      {
         this.CNPJ = CNPJ
      }
-    public int GetCNPJ()
+    public string GetCNPJ()
      {
         return CNPJ;
      }
+//----------------------------------------------------------------------------------
       string Endereço;
     public void SetEndereço (string Endereço)
      {
@@ -37,6 +42,7 @@ public class Clientes
      {
         return Endereço;
      }
+//------------------------------------------------------------------------------------
      string Cidade;
     public void SetCidade (string Cidade)
      {
@@ -46,6 +52,7 @@ public class Clientes
      {
         return Cidade;
      }
+//-----------------------------------------------------------------------------------------
      string Estado;
     public void SetEstado (string Estado)
      {
@@ -55,6 +62,7 @@ public class Clientes
      {
         return Estado;
      }
+//------------------------------------------------------------------------------------------     
      string Email;
     public void SetEmail (string Email)
      {
@@ -64,15 +72,17 @@ public class Clientes
      {
         return Email;
      }
-      int CEP;
-    public void SetCEP (int CEP)
+//------------------------------------------------------------------------------------------     
+      string CEP;
+    public void SetCEP (string CEP)
      {
         this.CEP = CEP
      }
-    public int GetCEP()
+    public string GetCEP()
      {
         return CEP;
      }
      
 
+  }
 }

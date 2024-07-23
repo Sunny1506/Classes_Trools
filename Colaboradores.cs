@@ -1,5 +1,7 @@
-public class Colaboradores
+namespace modelos;
 {
+public class Colaboradores
+  {
     string NomedoColaborador;
     int64 id;
     public void SetNomedoColaborador (string NomedoColaborador)
@@ -10,13 +12,14 @@ public class Colaboradores
      {
         return NomedoColaborador;
      }
-     int TelefonedoColaborador;
-    public void SetTelefonedoColaborador (int TelefonedoColaborador)
+     string TelefonedoColaborador;
+    public void SetTelefonedoColaborador (string TelefonedoColaborador)
      {
         this.TelefonedoColaborador = TelefonedoColaborador
      }
-    public int GetTelefonedoColaborador()
+    public string GetTelefonedoColaborador()
      {
         return TelefonedoColaborador;
      }
+  }
 }
