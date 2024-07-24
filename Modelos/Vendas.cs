@@ -1,6 +1,6 @@
 namespace modelos;
 {
-public class Vendas
+public class Vendas : Registro 
   {
     int Valormensal;
     public void SetValormensal (int Valormensal)

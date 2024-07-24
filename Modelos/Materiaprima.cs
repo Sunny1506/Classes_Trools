@@ -1,6 +1,6 @@
 namespace modelos;
 {
-public class Materiaprima
+public class Materiaprima : Registro
  {
     //aqui eu coloquei a unidade de medida da matéria prima
     Unidade unidade;

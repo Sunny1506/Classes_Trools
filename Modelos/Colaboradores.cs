@@ -1,6 +1,6 @@
 namespace modelos;
 {
-public class Colaboradores
+public class Colaboradores : Registro 
   {
     string NomedoColaborador;
     int64 id;

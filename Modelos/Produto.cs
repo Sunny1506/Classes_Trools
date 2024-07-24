@@ -1,6 +1,6 @@
 namespace modelos;
 {
-public class Produto
+public class Produto : Registro 
   { 
     Unidade unidade;
 

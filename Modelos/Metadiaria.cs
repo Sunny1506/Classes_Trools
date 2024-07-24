@@ -1,6 +1,6 @@
 namespace modelos;
 {
-public class Metadiaria
+public class Metadiaria : Registro
   {
     int Metadiaria;
    

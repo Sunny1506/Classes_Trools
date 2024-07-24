@@ -1,6 +1,6 @@
 namespace modelos;
 {
-public class Unidade
+public class Unidade : Registro
    {
     int id;
     string name;

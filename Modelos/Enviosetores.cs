@@ -2,7 +2,7 @@ namespace modelos;
 {
 
 
-public class Enviosetores
+public class Enviosetores : Registro
  {
     int Envio;
     int64 id;
