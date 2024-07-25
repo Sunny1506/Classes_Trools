@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClassesTrools.Views.Cadastroproduto"
+             BackgroundColor="#E6E6FA"
+             Title="Cadastro de Produto">
+
+    <StackLayout Padding="10">
+        <Image Source="stitchtech_logo.png" HorizontalOptions="Center" />
+
+        <Label Text="CADASTRO DE PRODUTO" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"  />
+
+        <Entry Placeholder="Número do Lote" BackgroundColor="#f7faf8" Margin="10,10,10,10"/>
+
+        <Entry Placeholder="Nome da Empresa" BackgroundColor="#f7faf8" Margin="10,10,10,10" />
+
+        <Entry Placeholder="Quantidade de Peças" BackgroundColor="#f7faf8" Margin="10,10,10,10" />
+
+        <Label Text="Tamanho Peças" FontAttributes="Bold"/>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="ESP" />
+            <Button Text="PP" />
+            <Button Text="P" />
+            <Button Text="M" />
+            <Button Text="G" />
+            <Button Text="GG" />
+            <Button Text="XG" />
+            <Entry Placeholder="Outro:" HorizontalOptions="FillAndExpand" BackgroundColor="#f7faf8" Margin="10,10,10,10"/>
+        </StackLayout>
+
+        <Entry Placeholder="Cor" BackgroundColor="#f7faf8" Margin="10,10,10,10" />
+        
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Estamparia" VerticalOptions="Center" />
+            <CheckBox />
+        </StackLayout>
+
+        <Entry Placeholder="Média Diária Estimada" BackgroundColor="#f7faf8" Margin="10,10,10,10" />
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Cancelar" BackgroundColor="#D3D3D3" TextColor="Black" />
+            <Button Text="Concluir" BackgroundColor="#9370DB" TextColor="White" Margin="10,0,0,0"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
