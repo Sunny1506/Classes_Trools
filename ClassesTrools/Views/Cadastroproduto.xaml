@@ -18,20 +18,20 @@
 
         <Label Text="Tamanho Peças" FontAttributes="Bold"/>
         <StackLayout Orientation="Horizontal">
-            <Button Text="ESP" />
-            <Button Text="PP" />
-            <Button Text="P" />
-            <Button Text="M" />
-            <Button Text="G" />
-            <Button Text="GG" />
-            <Button Text="XG" />
+            <Button Text="ESP" Margin="10,10,10,10" />
+            <Button Text="PP" Margin="10,10,10,10" />
+            <Button Text="P" Margin="10,10,10,10" />
+            <Button Text="M" Margin="10,10,10,10" />
+            <Button Text="G" Margin="10,10,10,10" />
+            <Button Text="GG" Margin="10,10,10,10" />
+            <Button Text="XG" Margin="10,10,10,10" />
             <Entry Placeholder="Outro:" HorizontalOptions="FillAndExpand" BackgroundColor="#f7faf8" Margin="10,10,10,10"/>
         </StackLayout>
 
         <Entry Placeholder="Cor" BackgroundColor="#f7faf8" Margin="10,10,10,10" />
         
         <StackLayout Orientation="Horizontal">
-            <Label Text="Estamparia" VerticalOptions="Center" />
+            <Label Text="Estamparia" VerticalOptions="Center" Margin="10,0"/>
             <CheckBox />
         </StackLayout>
 
