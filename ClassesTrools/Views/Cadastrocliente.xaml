@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ClassesTrools.Views.Cadastrocliente"
              BackgroundColor="#E6E6FA"
-             Title="Cadastro de Clientes">
+             Title="Cadastro de Clientes"
+             Shell.NavBarIsVisible ="false">
 
         
     <StackLayout Padding="10">
-        <Image Source="stitchtech_logo.png" HorizontalOptions="Center" />
+        <Image Source="styleroxo.png" HorizontalOptions="Center" />
 
         <Label Text="CADASTRO DE CLIENTES" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
 

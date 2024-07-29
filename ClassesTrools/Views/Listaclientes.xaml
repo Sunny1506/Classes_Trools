@@ -17,16 +17,22 @@
             <Label Text="CLIENTES"
                    FontAttributes="Bold"
                    FontSize="24"
-                   HorizontalOptions="Center"/>
+                   HorizontalOptions="Start"/>
             <HorizontalStackLayout>
                 <Entry Placeholder="Digite o nome do cliente que deseja encontrar"
                        HorizontalOptions="FillAndExpand"
                         BackgroundColor="#f7faf8"/>
-                <Button Text="🔍"
-                        BackgroundColor="#8A2BE2"
-                        TextColor="White"/>
+                <ImageButton Source ="lupa.png"
+                        BackgroundColor="#d184fa"
+                        Margin="5,5,5,5"
+                        Padding="10"
+                        HeightRequest="20"
+                        WidthRequest="20"
+                        CornerRadius="10"/>
                 <Button Text="+"
                         BackgroundColor="#8A2BE2"
+                         Margin="5,5,5,5"                       
+                         FontSize="20"
                         TextColor="White"/>
             </HorizontalStackLayout>
             <ScrollView>
@@ -53,19 +59,19 @@
                                      HeightRequest="20"
                                      WidthRequest="20"
                                      CornerRadius="10"
-                                     BackgroundColor="#c37cd6"/>
+                                     BackgroundColor="#d184fa"/>
                         <ImageButton Source ="lapis.png" 
                                      Padding="10"
                                      HeightRequest="20"
                                      WidthRequest="20"
                                      CornerRadius="10"
-                                     BackgroundColor ="#c37cd6"/>
+                                     BackgroundColor ="#d184fa"/>
                         <ImageButton Source ="lixo.png"
                                      Padding ="10"
                                     HeightRequest="20"
                                      WidthRequest="20"
                                     CornerRadius="10"
-                                     BackgroundColor ="#c37cd6"/>
+                                     BackgroundColor ="#d184fa"/>
                     </StackLayout>
                     <!-- Repeat ends here -->
                 </VerticalStackLayout>
