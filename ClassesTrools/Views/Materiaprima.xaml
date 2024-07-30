@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClassesTrools.Views.Materiaprima">
+
+    <ScrollView>
+        <StackLayout Padding="20" BackgroundColor="#EAEAEA">
+
+            <Image Source="logo.png" HorizontalOptions="Center" HeightRequest="100" Margin="0,10,0,20"/>
+            <Label Text="CADASTRO MATÉRIAS PRIMAS" FontSize="24" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center" Margin="0,0,0,20"/>
+
+            <Entry Placeholder="NOME DA MATÉRIA PRIMA" BackgroundColor="White" Margin="0,0,0,20"/>
+            <Picker Title="UNIDADE DE MEDIDA" BackgroundColor="White" Margin="0,0,0,20">
+                <!-- Adicione os itens da unidade de medida aqui -->
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Unidade 1</x:String>
+                        <x:String>Unidade 2</x:String>
+                        <x:String>Unidade 3</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
+                <Button Text="CANCELAR" BackgroundColor="Gray" TextColor="White" Margin="0,0,10,0"/>
+                <Button Text="SALVAR PROGRESSO" BackgroundColor="Purple" TextColor="White"/>
+            </StackLayout>
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

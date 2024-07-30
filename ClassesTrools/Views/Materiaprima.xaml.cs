@@ -2,9 +2,9 @@ using Microsoft.Maui.Controls;
 
 namespace ClassesTrools.Views
 {
-    public partial class Telainicial
+    public partial class RMateriaprima
     {
-        public Telainicial()
+        public Materiaprima()
         {
             InitializeComponent();
         }
