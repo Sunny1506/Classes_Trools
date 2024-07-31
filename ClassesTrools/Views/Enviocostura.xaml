@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClassesTrools.Views.Enviocostura"
+             Shell.NavBarIsVisible ="false">
+
+    <ScrollView>
+        <StackLayout Padding="20" BackgroundColor="#EAEAEA">
+
+            <Image Source="styleroxo.png" HorizontalOptions="Center" HeightRequest="100" Margin="0,10,0,20"/>
+            <Label Text="ENVIO PARA COSTURA" FontSize="24" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center" Margin="0,0,0,20"/>
+
+            <Grid Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Entry Placeholder="COSTUREIRO(A)" Grid.Column="0"/>
+                <Button Text="+" Grid.Column="1" BackgroundColor="Purple" TextColor="White"/>
+            </Grid>
+
+            <Picker Title="MATÉRIA PRIMA" BackgroundColor="White" Margin="0,0,0,20">
+                <!-- Adicione os itens da matéria-prima aqui -->
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Matéria Prima 1</x:String>
+                        <x:String>Matéria Prima 2</x:String>
+                        <x:String>Matéria Prima 3</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Entry Placeholder="QUANTIDADE" BackgroundColor="White" Margin="0,0,0,20"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
+                <Button Text="CANCELAR" BackgroundColor="Gray" TextColor="White" Margin="0,0,10,0"/>
+                <Button Text="SALVAR PROGRESSO" BackgroundColor="Purple" TextColor="White"/>
+            </StackLayout>
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

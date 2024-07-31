@@ -2,13 +2,13 @@ using Microsoft.Maui.Controls;
 
 namespace ClassesTrools.Views
 {
-    public partial class Materiaprima
+    public partial class Cadastrocostureiro
     {
-        public Materiaprima()
+        public Cadastrocostureiro()
         {
             InitializeComponent();
         }
-     var resposta = await DisplayAlert ("SALVAR" "DESEJA SALVAR?" "SIM" "NÃO");
+             var resposta = await DisplayAlert ("SALVAR" "DESEJA SALVAR?" "SIM" "NÃO");
     if (resposta == "SIM")
     {
         
@@ -17,6 +17,6 @@ namespace ClassesTrools.Views
     if (resposta == "VOLTAR")
     {
         
-    } 
+    }  
     }
 }

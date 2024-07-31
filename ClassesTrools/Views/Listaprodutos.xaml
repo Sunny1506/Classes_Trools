@@ -14,12 +14,12 @@
             <Image Source="styleroxo.png"
                    HorizontalOptions="Center"
                    HeightRequest="50"/>
-            <Label Text="CLIENTES"
+            <Label Text="PRODUTOS"
                    FontAttributes="Bold"
                    FontSize="24"
                    HorizontalOptions="Start"/>
             <HorizontalStackLayout>
-                <Entry Placeholder="Digite o nome do cliente que deseja encontrar"
+                <Entry Placeholder="Digite o nome do produto que deseja encontrar"
                        HorizontalOptions="FillAndExpand"
                         BackgroundColor="#f7faf8"/>
                 <ImageButton Source ="lupa.png"
@@ -47,10 +47,6 @@
                                VerticalOptions="Center"/>
                         <Label Text="NOME DO CLIENTE"
                                HorizontalOptions="FillAndExpand"
-                               VerticalOptions="Center"/>
-                        <Label Text="CNPJ"
-                               HorizontalOptions="FillAndExpand"
-                               VerticalOptions="Center"/>
                         <Label Text="DATA DE CADASTRO"
                                HorizontalOptions ="FillAndExpand"
                                VerticalOptions ="Center"/>

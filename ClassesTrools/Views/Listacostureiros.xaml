@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClassesTrools.Views.Listacostureiros"
+             Shell.NavBarIsVisible ="false">
+
+    <ScrollView>
+        <StackLayout Padding="20" BackgroundColor="#EAEAEA">
+
+            <Image Source="styleroxo.png" HorizontalOptions="Center" HeightRequest="100" Margin="0,10,0,20"/>
+            <Label Text="COSTUREIROS(AS)" FontSize="24" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center" Margin="0,0,0,20"/>
+
+            <Grid Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Entry Placeholder="DIGITE O NOME DO COSTUREIRO(A) QUE DESEJA ENCONTRAR" Grid.Column="0"/>
+                <Button Text="+" Grid.Column="1" BackgroundColor="Purple" TextColor="White"/>
+            </Grid>
+
+            <!-- Lista de Cortadores(as) -->
+            <StackLayout>
+                <!-- Exemplo de um item na lista de cortadores(as) -->
+                <Frame BorderColor="Purple" CornerRadius="10" Margin="0,0,0,10">
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="000" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                        <Label Text="NOME DO COLABORADOR" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                        <Label Text="DATA DE CADASTRO" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                        <ImageButton Source ="olho.png" BackgroundColor="#d184fa" HorizontalOptions="End"/>
+                        <ImageButton Source ="lapis.png" BackgroundColor="#d184fa" HorizontalOptions="End"/>
+                        <ImageButton Source ="lixo.png" BackgroundColor="#d184fa" HorizontalOptions="End"/>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Repita o Frame para cada item na lista de cortadores(as) -->
+               <Frame BorderColor="Purple" CornerRadius="10" Margin="0,0,0,10">
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="000" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                        <Label Text="NOME DO COLABORADOR" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                        <Label Text="DATA DE CADASTRO" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                        <ImageButton Source ="olho.png" BackgroundColor="#d184fa" HorizontalOptions="End"/>
+                        <ImageButton Source ="lapis.png" BackgroundColor="#d184fa" HorizontalOptions="End"/>
+                        <ImageButton Source ="lixo.png" BackgroundColor="#d184fa" HorizontalOptions="End"/>
+                    </StackLayout>
+                </Frame>
+
+                <!-- Adicione mais frames conforme necessário -->
+            </StackLayout>
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

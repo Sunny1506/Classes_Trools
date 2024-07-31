@@ -2,19 +2,14 @@ using Microsoft.Maui.Controls;
 
 namespace ClassesTrools.Views
 {
-    public partial class Cadastrocliente
+    public partial class Metadiaria
     {
-        public Cadastrocliente()
+        public Metadiaria()
         {
             InitializeComponent();
         }
-
-     var resposta = await DisplayAlert ("EXCLUIR" "DESEJA EXCLUIR?" "SIM" "NÃO");
-    if (resposta == "SIM")
-    {
-        
-    }    
-     await DisplayAlert ("VALIDAÇÃO" "DADOS INVÁLIDOS" "OK");
+     await DisplayAlert ("VALIDAÇÃO" "META NÃO BATIDA" "OK");
+     await DisplayAlert ("VALIDAÇÃO" "META BATIDA, PARABÉNS" "OK");
      
      var resposta = await DisplayAlert ("SALVAR" "DESEJA SALVAR?" "SIM" "NÃO");
     if (resposta == "SIM")
@@ -26,6 +21,5 @@ namespace ClassesTrools.Views
     {
         
     }   
-        
     }
 }
