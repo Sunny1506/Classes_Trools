@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ClassesTrools.Views.Listaclientes"
+             x:Class="ClassesTrools.Views.Listaprodutos"
              BackgroundColor="#DAD0E1"
              Shell.NavBarIsVisible ="false">
     <Grid Padding="20">
@@ -13,7 +13,7 @@
                     HorizontalOptions="Start" />
             <Image Source="styleroxo.png"
                    HorizontalOptions="Center"
-                   HeightRequest="50"/>
+                   HeightRequest="200"/>
             <Label Text="PRODUTOS"
                    FontAttributes="Bold"
                    FontSize="24"
@@ -46,7 +46,7 @@
                                WidthRequest="50"
                                VerticalOptions="Center"/>
                         <Label Text="NOME DO CLIENTE"
-                               HorizontalOptions="FillAndExpand"
+                               HorizontalOptions="FillAndExpand"/>
                         <Label Text="DATA DE CADASTRO"
                                HorizontalOptions ="FillAndExpand"
                                VerticalOptions ="Center"/>

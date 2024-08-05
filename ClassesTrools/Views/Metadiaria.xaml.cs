@@ -7,19 +7,35 @@ namespace ClassesTrools.Views
         public Metadiaria()
         {
             InitializeComponent();
+            
         }
-     await DisplayAlert ("VALIDAÇÃO" "META NÃO BATIDA" "OK");
-     await DisplayAlert ("VALIDAÇÃO" "META BATIDA, PARABÉNS" "OK");
+    private async void ButtonMetaNaoBatida (object sender, EventArgs args)
+    {
+      await DisplayAlert ("VALIDAÇÃO", "META NÃO BATIDA", "OK");
+    }
+   private async void ButtonMetaBatida (object sender, EventArgs args)
+    {
+      await DisplayAlert ("VALIDAÇÃO", "META BATIDA", "PARABÉNS", "OK");
+    }
+    
      
-     var resposta = await DisplayAlert ("SALVAR" "DESEJA SALVAR?" "SIM" "NÃO");
-    if (resposta == "SIM")
+    private async void ButtonSalvar (object sender, EventArgs args)
+ {
+    var resposta = await DisplayAlert ("SALVAR", "DESEJA SALVAR?", "SIM", "NÃO");
+    if (resposta)
     {
         
     }   
-    var resposta = await DisplayAlert ("CANCELAR" "DESEJA VOLTAR? É POSSÍVEL QUE AS INFORMAÇÕES NÃO SEJAM SALVAS " "VOLTAR" "CANCELAR");
-    if (resposta == "VOLTAR")
+ }
+ private async void ButtonVoltar (object sender, EventArgs args)
+      {
+        var resposta = await DisplayAlert ("CANCELAR", "DESEJA VOLTAR? É POSSÍVEL QUE AS INFORMAÇÕES NÃO SEJAM SALVAS", "VOLTAR", "CANCELAR");
+    if (resposta)
     {
         
     }   
+            
+   
+      }
     }
 }
