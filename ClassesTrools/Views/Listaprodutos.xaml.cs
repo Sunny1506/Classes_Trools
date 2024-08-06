@@ -10,14 +10,28 @@ namespace ClassesTrools.Views
             InitializeComponent();
         }
 
-   private async void ButtonDeleteProdutos (object sender, EventArgs args)
-{
- 	 var resposta = await DisplayAlert ("EXCLUIR", "DESEJA EXCLUIR?", "SIM", "NÃO");
-    if (resposta)
-    {
-        
-    }    
-}    
+        private async void ButtonDeleteProdutos(object sender, EventArgs args)
+        {
+            var resposta = await DisplayAlert("EXCLUIR", "DESEJA EXCLUIR?", "SIM", "NÃO");
+            if (resposta)
+            {
+
+            }
+        }
+        private void ButtonVoltarButtonClicked(object sender, EventArgs args)
+        {
+
+            Application.Current.MainPage = new Telainicial();
+
+        }
+
+
+        private void ButtonCadastroButtonClicked(object sender, EventArgs args)
+        {
+
+            Application.Current.MainPage = new Cadastroproduto();
+
+        }
     }
 
 }

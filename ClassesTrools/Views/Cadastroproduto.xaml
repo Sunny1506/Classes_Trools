@@ -4,43 +4,85 @@
              x:Class="ClassesTrools.Views.Cadastroproduto"
              BackgroundColor="#E6E6FA"
              Title="Cadastro de Produto"
-             Shell.NavBarIsVisible ="false">
+             Shell.NavBarIsVisible="false">
 
     <StackLayout Padding="10">
-        <Image Source="styleroxo.png" HorizontalOptions="Center" />
+        <Image Source="styleroxo.png"
+                HorizontalOptions="Center"
+                HeightRequest="130"/>
+        <Button Text="VOLTAR"
+                Clicked="ButtonVoltarListaButtonClicked"
+                BackgroundColor="#8A2BE2"
+                TextColor="White"
+                FontAttributes="Bold"
+                HorizontalOptions="Start"/>
 
-        <Label Text="CADASTRO DE PRODUTO" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"  />
+        <Label Text="CADASTRO DE PRODUTO"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"/>
 
-        <Entry Placeholder="Número do Lote" BackgroundColor="#f7faf8" Margin="10,10,10,10"/>
+        <Entry Placeholder="Número do Lote"
+                BackgroundColor="#f7faf8"
+                Margin="10,10,10,10"/>
 
-        <Entry Placeholder="Nome da Empresa" BackgroundColor="#f7faf8" Margin="10,10,10,10" />
+        <Entry Placeholder="Nome da Empresa"
+                BackgroundColor="#f7faf8"
+                Margin="10,10,10,10"/>
 
-        <Entry Placeholder="Quantidade de Peças" BackgroundColor="#f7faf8" Margin="10,10,10,10" />
+        <Entry Placeholder="Quantidade de Peças"
+                BackgroundColor="#f7faf8"
+                Margin="10,10,10,10"/>
 
-        <Label Text="Tamanho Peças" FontAttributes="Bold"/>
+        <Label Text="Tamanho Peças"
+                FontAttributes="Bold"/>
         <StackLayout Orientation="Horizontal">
-            <Button Text="ESP" Margin="10,10,10,10" />
-            <Button Text="PP" Margin="10,10,10,10" />
-            <Button Text="P" Margin="10,10,10,10" />
-            <Button Text="M" Margin="10,10,10,10" />
-            <Button Text="G" Margin="10,10,10,10" />
-            <Button Text="GG" Margin="10,10,10,10" />
-            <Button Text="XG" Margin="10,10,10,10" />
-            <Entry Placeholder="Outro:" HorizontalOptions="FillAndExpand" BackgroundColor="#f7faf8" Margin="10,10,10,10"/>
+            <Button Text="ESP"
+                    Margin="10,10,10,10"/>
+            <Button Text="PP"
+                    Margin="10,10,10,10"/>
+            <Button Text="P"
+                    Margin="10,10,10,10"/>
+            <Button Text="M"
+                    Margin="10,10,10,10"/>
+            <Button Text="G"
+                    Margin="10,10,10,10"/>
+            <Button Text="GG"
+                    Margin="10,10,10,10"/>
+            <Button Text="XG"
+                    Margin="10,10,10,10"/>
+            <Entry Placeholder="Outro:"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#f7faf8"
+                    Margin="10,10,10,10"/>
         </StackLayout>
 
-        <Entry Placeholder="Cor" BackgroundColor="#f7faf8" Margin="10,10,10,10" />
-        
+        <Entry Placeholder="Cor"
+                BackgroundColor="#f7faf8"
+                Margin="10,10,10,10"/>
+
         <StackLayout Orientation="Horizontal">
-            <Label Text="Estamparia" VerticalOptions="Center" Margin="10,0"/>
-            <CheckBox />
+            <Label Text="Estamparia"
+                    VerticalOptions="Center"
+                    Margin="10,0"/>
+            <CheckBox/>
         </StackLayout>
 
-        <Entry Placeholder="Média Diária Estimada" BackgroundColor="#f7faf8" Margin="10,10,10,10" />
+        <Entry Placeholder="Média Diária Estimada"
+                BackgroundColor="#f7faf8"
+                Margin="10,10,10,10"/>
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-            <Button Text="Cancelar" BackgroundColor="#D3D3D3" TextColor="Black" />
-            <Button Text="Concluir" BackgroundColor="#9370DB" TextColor="White" Margin="10,0,0,0"/>
+        <StackLayout Orientation="Horizontal"
+                HorizontalOptions="Center">
+            <Button Text="Cancelar"
+                    BackgroundColor="#D3D3D3"
+                    TextColor="Black"
+                    Clicked="ButtonVoltarButtonClicked"/>
+            <Button Text="Concluir"
+                    BackgroundColor="#9370DB"
+                    TextColor="White"
+                    Margin="10,0,0,0"
+                    Clicked="ButtonSalvarButtonClicked"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

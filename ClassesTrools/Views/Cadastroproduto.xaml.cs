@@ -8,7 +8,7 @@ namespace ClassesTrools.Views
         {
             InitializeComponent();
         }
-        private async void ButtonDelete(object sender, EventArgs args)
+        private async void ButtonDeleteButtonClicked(object sender, EventArgs args)
         {
             var resposta = await DisplayAlert("EXCLUIR", "DESEJA EXCLUIR?", "SIM", "NÃO");
             if (resposta)
@@ -16,7 +16,7 @@ namespace ClassesTrools.Views
 
             }
         }
-        private async void ButtonDadosInválidos(object sender, EventArgs args)
+        private async void ButtonDadosInválidosButtonClicked(object sender, EventArgs args)
         {
             await DisplayAlert("VALIDAÇÃO", "DADOS INVÁLIDOS", "OK");
 
@@ -26,16 +26,16 @@ namespace ClassesTrools.Views
 
             }
         }
-        private async void ButtonVoltar(object sender, EventArgs args)
+        private async void ButtonVoltarButtonClicked(object sender, EventArgs args)
         {
             var resposta = await DisplayAlert("CANCELAR", "DESEJA VOLTAR? É POSSÍVEL QUE AS INFORMAÇÕES NÃO SEJAM SALVAS", "VOLTAR", "CANCELAR");
             if (resposta)
             {
-
+                 Application.Current.MainPage = new Listaprodutos();
             }
         }
    
-    private async void ButtonNaoEncontrado(object sender, EventArgs args)
+    private async void ButtonNaoEncontradoButtonClicked(object sender, EventArgs args)
     {
         var resposta = await DisplayAlert("CLIENTE NÃO ENCONTRADO", "CLIENTE NÃO ENCONTRADO, DESEJA CADASTRAR CLIENTE?", "CADASTRAR", "CANCELAR");
         if (resposta)
@@ -44,6 +44,23 @@ namespace ClassesTrools.Views
         }
 
     }
+   private async void ButtonSalvarButtonClicked(object sender, EventArgs args)
+        {
+            var resposta = await DisplayAlert("SALVAR", "DESEJA SALVAR?", "SIM", "NÃO");
+            if (resposta)
+            {
+               Application.Current.MainPage = new Listaprodutos();
+            }
+
+        }
+ private async void ButtonVoltarListaButtonClicked(object sender, EventArgs args)
+        {
+            var resposta = await DisplayAlert("VOLTAR TELA", "DESEJA VOLTAR? É POSSÍVEL QUE AS INFORMAÇÕES NÃO SEJAM SALVAS", "VOLTAR", "CANCELAR");
+            if (resposta)
+            {
+                 Application.Current.MainPage = new Listaprodutos();
+            }
+        }
 
    }
 }

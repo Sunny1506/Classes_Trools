@@ -7,13 +7,14 @@
     <Grid Padding="20">
         <VerticalStackLayout Spacing="20">
             <Button Text="VOLTAR"
+                    Clicked="ButtonVoltarButtonClicked"
                     BackgroundColor="#8A2BE2"
                     TextColor="White"
                     FontAttributes="Bold"
                     HorizontalOptions="Start" />
             <Image Source="styleroxo.png"
                    HorizontalOptions="Center"
-                   HeightRequest="50"/>
+                   HeightRequest="200"/>
             <Label Text="CLIENTES"
                    FontAttributes="Bold"
                    FontSize="24"
@@ -30,6 +31,7 @@
                         WidthRequest="20"
                         CornerRadius="10"/>
                 <Button Text="+"
+                        Clicked="ButtonCadastroButtonClicked"
                         BackgroundColor="#8A2BE2"
                          Margin="5,5,5,5"                       
                          FontSize="20"
@@ -72,6 +74,7 @@
                                      WidthRequest="20"
                                     CornerRadius="10"
                                      BackgroundColor ="#d184fa"/>
+                                     
                     </StackLayout>
                     <!-- Repeat ends here -->
                 </VerticalStackLayout>

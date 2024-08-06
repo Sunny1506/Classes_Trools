@@ -16,5 +16,17 @@ namespace ClassesTrools.Views
 
             }
         }
+        private void ButtonVoltarButtonClicked(object sender, EventArgs args)
+        {
+
+            Application.Current.MainPage = new Telainicial();
+
+        }
+         private void ButtonCadastroButtonClicked(object sender, EventArgs args)
+        {
+
+            Application.Current.MainPage = new Cadastrocortador();
+
+        }
     }
 }

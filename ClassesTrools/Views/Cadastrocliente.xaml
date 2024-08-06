@@ -4,36 +4,78 @@
              x:Class="ClassesTrools.Views.Cadastrocliente"
              BackgroundColor="#E6E6FA"
              Title="Cadastro de Clientes"
-             Shell.NavBarIsVisible ="false">
+             Shell.NavBarIsVisible="false">
 
-        
+
     <StackLayout Padding="10">
-        <Image Source="styleroxo.png" HorizontalOptions="Center" />
+        <Image Source="styleroxo.png"
+                HorizontalOptions="Center"
+                HeightRequest="150"/>
+        <Button Text="VOLTAR"
+                Clicked="ButtonVoltarListaButtonClicked"
+                BackgroundColor="#8A2BE2"
+                TextColor="White"
+                FontAttributes="Bold"
+                HorizontalOptions="Start"/>
 
-        <Label Text="CADASTRO DE CLIENTES" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+        <Label Text="CADASTRO DE CLIENTES"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"/>
 
-        <Entry Placeholder="Nome do Cliente / Empresa*" BackgroundColor="#f7faf8" Margin="10,10,10,10" />
+        <Entry Placeholder="Nome do Cliente / Empresa*"
+                BackgroundColor="#f7faf8"
+                Margin="10,10,10,10"/>
 
         <StackLayout Orientation="Horizontal">
-            <Entry Placeholder="CNPJ / CPF*" BackgroundColor="#f7faf8" HorizontalOptions="FillAndExpand" Margin="10,10,10,10"/>
-            <Entry Placeholder="Tel*" BackgroundColor="#f7faf8" HorizontalOptions="FillAndExpand" Margin="10,10,10,10"/>
+            <Entry Placeholder="CNPJ / CPF*"
+                    BackgroundColor="#f7faf8"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="10,10,10,10"/>
+            <Entry Placeholder="Tel*"
+                    BackgroundColor="#f7faf8"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="10,10,10,10"/>
         </StackLayout>
 
-        <Entry Placeholder="Endereço" BackgroundColor="#f7faf8" Margin="10,10,10,10"/>
+        <Entry Placeholder="Endereço"
+                BackgroundColor="#f7faf8"
+                Margin="10,10,10,10"/>
 
         <StackLayout Orientation="Horizontal">
-            <Entry Placeholder="Cidade" BackgroundColor="#f7faf8" HorizontalOptions="FillAndExpand" Margin="10,10,10,10" />
-            <Entry Placeholder="Estado" BackgroundColor="#f7faf8" HorizontalOptions="FillAndExpand" Margin="10,10,10,10"/>
-            <Entry Placeholder="CEP" BackgroundColor="#f7faf8" HorizontalOptions="FillAndExpand" Margin="10,10,10,10"/>
+            <Entry Placeholder="Cidade"
+                    BackgroundColor="#f7faf8"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="10,10,10,10"/>
+            <Entry Placeholder="Estado"
+                    BackgroundColor="#f7faf8"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="10,10,10,10"/>
+            <Entry Placeholder="CEP"
+                    BackgroundColor="#f7faf8"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="10,10,10,10"/>
         </StackLayout>
 
-        <Entry Placeholder="E-mail" BackgroundColor="#f7faf8" Margin="10,10,10,10"/>
-        <Entry Placeholder="Número do Lote" BackgroundColor="#f7faf8" Margin="10,10,10,10" />
+        <Entry Placeholder="E-mail"
+                BackgroundColor="#f7faf8"
+                Margin="10,10,10,10"/>
+        <Entry Placeholder="Número do Lote"
+                BackgroundColor="#f7faf8"
+                Margin="10,10,10,10"/>
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-            <Button Text="Cancelar" BackgroundColor="#D3D3D3" TextColor="Black" />
-            <Button Text="Concluir" BackgroundColor="#9370DB" TextColor="White" Margin="10,0,0,0"/>
-         
+        <StackLayout Orientation="Horizontal"
+                HorizontalOptions="Center">
+            <Button Text="Cancelar"
+                    BackgroundColor="#D3D3D3"
+                    TextColor="Black"
+                    Clicked="ButtonVoltarTelaButtonClicked"/>
+            <Button Text="Concluir"
+                    BackgroundColor="#9370DB"
+                    TextColor="White"
+                    Margin="10,0,0,0"
+                    Clicked="ButtonSalvarButtonClicked"/>
+
         </StackLayout>
     </StackLayout>
 </ContentPage>

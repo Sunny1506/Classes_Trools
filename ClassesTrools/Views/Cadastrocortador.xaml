@@ -6,6 +6,12 @@
 
     <ScrollView>
         <StackLayout Padding="20" BackgroundColor="#D5CCE3">
+         <Button Text="VOLTAR"
+                    Clicked="ButtonVoltarListaButtonClicked"
+                    BackgroundColor="#8A2BE2"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start" />
 
             <Image Source="styleroxo.png" HorizontalOptions="Center" HeightRequest="200" Margin="0,10,0,20"/>
             <Label Text="CADASTRO DE CORTADOR" FontSize="24" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center" Margin="0,0,0,20"/>
@@ -18,8 +24,8 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Button Text="CANCELAR" Grid.Column="0" BackgroundColor="#9f58f5" TextColor="Black"/>
-                <Button Text="SALVAR PROGUESSO" Grid.Column="1" BackgroundColor="Purple" TextColor="White" Margin="10,0,0,0"/>
+                <Button Text="CANCELAR" Grid.Column="0" BackgroundColor="#9f58f5" TextColor="Black" Clicked="ButtonVoltarButtonClicked"/>
+                <Button Text="SALVAR PROGUESSO" Grid.Column="1" BackgroundColor="#cd5ff5" TextColor="White" Margin="10,0,0,0" Clicked="ButtonSalvarButtonClicked"/>
             </Grid>
 
         </StackLayout>

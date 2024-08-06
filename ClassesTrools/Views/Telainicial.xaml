@@ -15,13 +15,13 @@
             <BoxView HeightRequest="1" BackgroundColor="Purple" Margin="0,10,0,10"/>
 
             <StackLayout>
-                <Button Text="CLIENTE" ImageSource="clientes.png" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold"  />
-                <Button Text="LOTE / PRODUTOS" ImageSource="produtos.png" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold"  />
-                <Button Text="MÉDIA DIÁRIA" ImageSource="meta.png" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold" />
-                <Button Text="CORTADOR" ImageSource="cortador.png" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold" />
-                <Button Text="COSTUREIROS" ImageSource="costureiros.png" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold" />
-                <Button Text="ACABAMENTISTAS" ImageSource="acabamentistas.png" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold" />
-                <Button Text="VENDAS" ImageSource="vendas.png" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold"  />
+                <Button Text="CLIENTE"  Clicked="ButtonClienteButtonClicked" ImageSource="clientes.png" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold"  />
+                <Button Text="PRODUTOS" Clicked="ButtonProdutoButtonClicked" ImageSource="produtos.png" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold"  />
+                <Button Text="MÉDIA DIÁRIA" Clicked="ButtonMetaButtonClicked" ImageSource="meta.png" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold" />
+                <Button Text="CORTADOR" Clicked="ButtonCortadorButtonClicked" ImageSource="cortador.png" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold" />
+                <Button Text="COSTUREIROS" Clicked="ButtonCostureirosButtonClicked" ImageSource="costureiros.png" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold" />
+                <Button Text="ACABAMENTISTAS" Clicked="ButtonAcabamentistasButtonClicked" ImageSource="acabamentistas.png" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold" />
+                <Button Text="VENDAS" Clicked="ButtonVendasButtonClicked" ImageSource="vendas.png" HorizontalOptions="Start" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold"  />
             </StackLayout>
         </StackLayout>
 
