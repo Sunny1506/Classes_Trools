@@ -32,6 +32,15 @@ namespace ClassesTrools.Views
             Application.Current.MainPage = new Cadastroproduto();
 
         }
-    }
 
+        private async void ButtonExcluirButtonClicked(object sender, EventArgs args)
+        {
+            var resposta = await DisplayAlert("EXCLUIR", "DESEJA EXCLUIR?", "SIM", "NÃO");
+            if (resposta)
+            {
+                Application.Current.MainPage = new Listaprodutos();
+            }
+        }
+
+    }
 }

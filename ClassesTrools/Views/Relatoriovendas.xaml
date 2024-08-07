@@ -2,52 +2,205 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ClassesTrools.Views.Relatoriovendas"
-             Shell.NavBarIsVisible ="false">
+             Shell.NavBarIsVisible="false">
 
     <ScrollView>
-        <StackLayout Padding="20" BackgroundColor="#DAD0E1">
-             <Button Text="VOLTAR"
+        <StackLayout Padding="20"
+                BackgroundColor="#DAD0E1">
+            <Button Text="VOLTAR"
                     Clicked="ButtonVoltarButtonClicked"
                     BackgroundColor="#8A2BE2"
                     TextColor="White"
                     FontAttributes="Bold"
-                    HorizontalOptions="Start" />
+                    HorizontalOptions="Start"/>
 
-            <Image Source="styleroxo.png" HorizontalOptions="Center" HeightRequest="200" Margin="0,10,0,20"/>
-            <Label Text="RELATÓRIO DE VENDAS" FontSize="24" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Start" Margin="0,0,0,20"/>
-            
-            <Frame BackgroundColor="#E6E6FA" CornerRadius="10" Padding="10" Margin="0,0,0,20">
-                <StackLayout Orientation="Horizontal" Spacing="10">
-                    <ImageButton Source="filter.png" WidthRequest="40" HeightRequest="40" CornerRadius="10" BackgroundColor ="#d184fa" />
+            <Image Source="styleroxo.png"
+                    HorizontalOptions="Center"
+                    HeightRequest="200"
+                    Margin="0,10,0,20"/>
+            <Label Text="RELATÓRIO DE VENDAS"
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    HorizontalOptions="Start"
+                    Margin="0,0,0,20"/>
+
+            <Frame BackgroundColor="#E6E6FA"
+                    CornerRadius="10"
+                    Padding="10"
+                    Margin="0,0,0,20">
+                <StackLayout Orientation="Horizontal"
+                        Spacing="10">
+                    <ImageButton Source="filter.png"
+                            WidthRequest="40"
+                            HeightRequest="40"
+                            CornerRadius="10"
+                            BackgroundColor="#d184fa"/>
                     <StackLayout>
                         <StackLayout Orientation="Horizontal">
-                            <CheckBox />
-                            <Label Text="DATA MAIS RECENTE" VerticalOptions="Center"/>
+                            <CheckBox/>
+                            <Label Text="DATA MAIS RECENTE"
+                                    VerticalOptions="Center"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
-                            <CheckBox />
-                            <Label Text="VALORES EM ORDEM CRESCENTE" VerticalOptions="Center"/>
+                            <CheckBox/>
+                            <Label Text="VALORES EM ORDEM CRESCENTE"
+                                    VerticalOptions="Center"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
-                            <CheckBox />
-                            <Label Text="ORDEM ALFABÉTICA" VerticalOptions="Center"/>
+                            <CheckBox/>
+                            <Label Text="ORDEM ALFABÉTICA"
+                                    VerticalOptions="Center"/>
                         </StackLayout>
-                        <Entry Placeholder="CLIENTE" BackgroundColor="White" HorizontalOptions="FillAndExpand"/>
+                        <Entry Placeholder="CLIENTE"
+                                BackgroundColor="White"
+                                HorizontalOptions="FillAndExpand"/>
+                        <Button Text="+"
+                                Clicked="ButtonCadastroButtonClicked"
+                                BackgroundColor="#8A2BE2"
+                                Margin="5,5,5,5"
+                                FontSize="20"
+                                TextColor="White"/>
                     </StackLayout>
                 </StackLayout>
             </Frame>
 
             <StackLayout Spacing="10">
                 <!-- Repeat this Frame for each sales report item -->
-                <Frame BackgroundColor="#E6E6FA" CornerRadius="10" Padding="10">
-                    <StackLayout Orientation="Horizontal" Spacing="10">
+                <Frame BackgroundColor="#E6E6FA"
+                        CornerRadius="10"
+                        Padding="10">
+                    <StackLayout Orientation="Horizontal"
+                            Spacing="10">
                         <CheckBox VerticalOptions="Center"/>
-                        <Label Text="000" VerticalOptions="Center"/>
-                        <Label Text="EMPRESA" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
-                        <Label Text="DATA DE CADASTRO" VerticalOptions="Center"/>
-                        <ImageButton Source="olho.png" WidthRequest="30" HeightRequest="30" CornerRadius="10" Padding="10" BackgroundColor ="#d184fa"/>
-                        <ImageButton Source="lapis.png" WidthRequest="30" HeightRequest="30" CornerRadius="10" Padding="10" BackgroundColor ="#d184fa"/>
-                        <ImageButton Source="lixo.png" WidthRequest="30" HeightRequest="30" CornerRadius="10" Padding="10" BackgroundColor ="#d184fa"/>
+                        <Label Text="000"
+                                VerticalOptions="Center"/>
+                        <Label Text="EMPRESA"
+                                VerticalOptions="Center"
+                                HorizontalOptions="FillAndExpand"/>
+                        <Label Text="DATA DE CADASTRO"
+                                VerticalOptions="Center"/>
+                        <ImageButton Source="olho.png"
+                                WidthRequest="30"
+                                HeightRequest="30"
+                                CornerRadius="10"
+                                Padding="10"
+                                BackgroundColor="#d184fa"/>
+                        <ImageButton Source="lapis.png"
+                                WidthRequest="30"
+                                HeightRequest="30"
+                                CornerRadius="10"
+                                Padding="10"
+                                BackgroundColor="#d184fa"/>
+                        <ImageButton Source="lixo.png"
+                                WidthRequest="30"
+                                HeightRequest="30"
+                                CornerRadius="10"
+                                Padding="10"
+                                BackgroundColor="#d184fa"
+                                Clicked="ButtonExcluirButtonClicked"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#E6E6FA"
+                        CornerRadius="10"
+                        Padding="10">
+                    <StackLayout Orientation="Horizontal"
+                            Spacing="10">
+                        <CheckBox VerticalOptions="Center"/>
+                        <Label Text="000"
+                                VerticalOptions="Center"/>
+                        <Label Text="EMPRESA"
+                                VerticalOptions="Center"
+                                HorizontalOptions="FillAndExpand"/>
+                        <Label Text="DATA DE CADASTRO"
+                                VerticalOptions="Center"/>
+                        <ImageButton Source="olho.png"
+                                WidthRequest="30"
+                                HeightRequest="30"
+                                CornerRadius="10"
+                                Padding="10"
+                                BackgroundColor="#d184fa"/>
+                        <ImageButton Source="lapis.png"
+                                WidthRequest="30"
+                                HeightRequest="30"
+                                CornerRadius="10"
+                                Padding="10"
+                                BackgroundColor="#d184fa"/>
+                        <ImageButton Source="lixo.png"
+                                WidthRequest="30"
+                                HeightRequest="30"
+                                CornerRadius="10"
+                                Padding="10"
+                                BackgroundColor="#d184fa"
+                                Clicked="ButtonExcluirButtonClicked"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#E6E6FA"
+                        CornerRadius="10"
+                        Padding="10">
+                    <StackLayout Orientation="Horizontal"
+                            Spacing="10">
+                        <CheckBox VerticalOptions="Center"/>
+                        <Label Text="000"
+                                VerticalOptions="Center"/>
+                        <Label Text="EMPRESA"
+                                VerticalOptions="Center"
+                                HorizontalOptions="FillAndExpand"/>
+                        <Label Text="DATA DE CADASTRO"
+                                VerticalOptions="Center"/>
+                        <ImageButton Source="olho.png"
+                                WidthRequest="30"
+                                HeightRequest="30"
+                                CornerRadius="10"
+                                Padding="10"
+                                BackgroundColor="#d184fa"/>
+                        <ImageButton Source="lapis.png"
+                                WidthRequest="30"
+                                HeightRequest="30"
+                                CornerRadius="10"
+                                Padding="10"
+                                BackgroundColor="#d184fa"/>
+                        <ImageButton Source="lixo.png"
+                                WidthRequest="30"
+                                HeightRequest="30"
+                                CornerRadius="10"
+                                Padding="10"
+                                BackgroundColor="#d184fa"
+                                Clicked="ButtonExcluirButtonClicked"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="#E6E6FA"
+                        CornerRadius="10"
+                        Padding="10">
+                    <StackLayout Orientation="Horizontal"
+                            Spacing="10">
+                        <CheckBox VerticalOptions="Center"/>
+                        <Label Text="000"
+                                VerticalOptions="Center"/>
+                        <Label Text="EMPRESA"
+                                VerticalOptions="Center"
+                                HorizontalOptions="FillAndExpand"/>
+                        <Label Text="DATA DE CADASTRO"
+                                VerticalOptions="Center"/>
+                        <ImageButton Source="olho.png"
+                                WidthRequest="30"
+                                HeightRequest="30"
+                                CornerRadius="10"
+                                Padding="10"
+                                BackgroundColor="#d184fa"/>
+                        <ImageButton Source="lapis.png"
+                                WidthRequest="30"
+                                HeightRequest="30"
+                                CornerRadius="10"
+                                Padding="10"
+                                BackgroundColor="#d184fa"/>
+                        <ImageButton Source="lixo.png"
+                                WidthRequest="30"
+                                HeightRequest="30"
+                                CornerRadius="10"
+                                Padding="10"
+                                BackgroundColor="#d184fa"
+                                Clicked="ButtonExcluirButtonClicked"/>
                     </StackLayout>
                 </Frame>
                 <!-- Repeat until here -->

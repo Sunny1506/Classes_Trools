@@ -31,38 +31,38 @@ namespace ClassesTrools.Views
             var resposta = await DisplayAlert("CANCELAR", "DESEJA VOLTAR? É POSSÍVEL QUE AS INFORMAÇÕES NÃO SEJAM SALVAS", "VOLTAR", "CANCELAR");
             if (resposta)
             {
-                 Application.Current.MainPage = new Listaprodutos();
+                Application.Current.MainPage = new Listaprodutos();
             }
         }
-   
-    private async void ButtonNaoEncontradoButtonClicked(object sender, EventArgs args)
-    {
-        var resposta = await DisplayAlert("CLIENTE NÃO ENCONTRADO", "CLIENTE NÃO ENCONTRADO, DESEJA CADASTRAR CLIENTE?", "CADASTRAR", "CANCELAR");
-        if (resposta)
+
+        private async void ButtonNaoEncontradoButtonClicked(object sender, EventArgs args)
         {
+            var resposta = await DisplayAlert("CLIENTE NÃO ENCONTRADO", "CLIENTE NÃO ENCONTRADO, DESEJA CADASTRAR CLIENTE?", "CADASTRAR", "CANCELAR");
+            if (resposta)
+            {
+
+            }
 
         }
-
-    }
-   private async void ButtonSalvarButtonClicked(object sender, EventArgs args)
+        private async void ButtonSalvarButtonClicked(object sender, EventArgs args)
         {
             var resposta = await DisplayAlert("SALVAR", "DESEJA SALVAR?", "SIM", "NÃO");
             if (resposta)
             {
-               Application.Current.MainPage = new Listaprodutos();
+                Application.Current.MainPage = new Listaprodutos();
             }
 
         }
- private async void ButtonVoltarListaButtonClicked(object sender, EventArgs args)
+        private async void ButtonVoltarListaButtonClicked(object sender, EventArgs args)
         {
             var resposta = await DisplayAlert("VOLTAR TELA", "DESEJA VOLTAR? É POSSÍVEL QUE AS INFORMAÇÕES NÃO SEJAM SALVAS", "VOLTAR", "CANCELAR");
             if (resposta)
             {
-                 Application.Current.MainPage = new Listaprodutos();
+                Application.Current.MainPage = new Listaprodutos();
             }
         }
 
-   }
+    }
 }
 
 

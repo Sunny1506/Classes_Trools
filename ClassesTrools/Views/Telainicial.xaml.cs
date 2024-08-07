@@ -14,13 +14,13 @@ namespace ClassesTrools.Views
             Application.Current.MainPage = new Listaclientes();
 
         }
-         private void ButtonProdutoButtonClicked(object sender, EventArgs args)
+        private void ButtonProdutoButtonClicked(object sender, EventArgs args)
         {
 
             Application.Current.MainPage = new Listaprodutos();
 
         }
-         private void ButtonMetaButtonClicked(object sender, EventArgs args)
+        private void ButtonMetaButtonClicked(object sender, EventArgs args)
         {
 
             Application.Current.MainPage = new Metadiaria();
