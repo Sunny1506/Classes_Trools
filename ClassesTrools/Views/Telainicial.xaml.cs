@@ -26,22 +26,22 @@ namespace ClassesTrools.Views
             Application.Current.MainPage = new Metadiaria();
 
         }
-        private void ButtonCortadorButtonClicked(object sender, EventArgs args)
+        private void ButtonEnviocorteButtonClicked(object sender, EventArgs args)
         {
 
-            Application.Current.MainPage = new Listacortadores();
+            Application.Current.MainPage = new Enviocorte();
 
         }
-        private void ButtonCostureirosButtonClicked(object sender, EventArgs args)
+        private void ButtonEnviocosturaButtonClicked(object sender, EventArgs args)
         {
 
-            Application.Current.MainPage = new Listacostureiros();
+            Application.Current.MainPage = new Enviocostura();
 
         }
-        private void ButtonAcabamentistasButtonClicked(object sender, EventArgs args)
+        private void ButtonEnvioacabamentoButtonClicked(object sender, EventArgs args)
         {
 
-            Application.Current.MainPage = new Listaacabamentistas();
+            Application.Current.MainPage = new Envioacabamento();
 
         }
         private void ButtonVendasButtonClicked(object sender, EventArgs args)
@@ -51,6 +51,12 @@ namespace ClassesTrools.Views
 
         }
 
+        private void ButtonCortadoresButtonClicked(object sender, EventArgs args)
+        {
+
+            Application.Current.MainPage = new Listacortadores();
+
+        }
 
 
     }

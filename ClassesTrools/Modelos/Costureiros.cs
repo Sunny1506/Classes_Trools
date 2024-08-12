@@ -1,7 +1,7 @@
 namespace Modelos
 {
-public class Costureiros : Colaboradores
-{
-
-}
+    public class Costureiros : Colaboradores
+    {
+       
+    }
 }

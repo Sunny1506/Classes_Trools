@@ -1,7 +1,7 @@
 namespace Modelos
 {
-public class Acabamentista : Colaboradores
-{
-
-}
+    public class Acabamentista : Colaboradores
+    {
+       
+    }
 }

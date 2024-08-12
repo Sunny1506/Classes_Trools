@@ -2,15 +2,7 @@ namespace Modelos
 {
 public class Metadiaria : Registro
   {
-    int Meta;
+   public int Meta { get; set; }
    
-    public void SetMetadiaria (int Metadiaria)
-     {
-        this.Meta = Metadiaria;
-     }
-    public int GetMetadiaria()
-     {
-        return Meta;
-     }
   }     
 }

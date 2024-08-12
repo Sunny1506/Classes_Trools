@@ -4,6 +4,7 @@ namespace ClassesTrools.Views
 {
     public partial class Listacortadores
     {
+        public Page Paraondevoltar;
         public Listacortadores()
         {
             InitializeComponent();
@@ -11,7 +12,7 @@ namespace ClassesTrools.Views
         private void ButtonVoltarButtonClicked(object sender, EventArgs args)
         {
 
-            Application.Current.MainPage = new Telainicial();
+            Application.Current.MainPage = Paraondevoltar;
 
         }
         private void ButtonCadastroButtonClicked(object sender, EventArgs args)
@@ -28,5 +29,12 @@ namespace ClassesTrools.Views
                 Application.Current.MainPage = new Listacortadores();
             }
         }
+         private void ButtonVoltarEnvioButtonClicked(object sender, EventArgs args)
+        {
+
+            Application.Current.MainPage = new Enviocorte();
+
+        }
     }
+
 }

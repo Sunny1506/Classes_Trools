@@ -1,7 +1,6 @@
 namespace Modelos
 {
-public class Cortadores : Colaboradores
-{
-
-}
+    public class Cortadores : Colaboradores
+    {
+    }
 }
