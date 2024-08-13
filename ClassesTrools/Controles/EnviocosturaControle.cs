@@ -2,45 +2,45 @@ using Modelos;
 
 namespace Controles;
 
-public class CorteControle : BaseControle
+public class EnviocosturaControle : BaseControle
 {
   //----------------------------------------------------------------------------
 
-  public CorteControle() : base()
+  public EnviocosturaControle() : base()
   {
-    NomeDaTabela = "Corte";
+    NomeDaTabela = "Enviocostura";
   }
 
   //----------------------------------------------------------------------------
 
   public virtual Registro? Ler(int id)
   {
-    var collection = liteDB.GetCollection<Corte>(NomeDaTabela);
+    var collection = liteDB.GetCollection<Enviocostura>(NomeDaTabela);
     return collection.FindOne(d => d.Id == id);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual List<Corte? LerTodos()
+  public virtual List<Enviocostura? LerTodos()
   {
-    var tabela = liteDB.GetCollection<Corte>(NomeDaTabela);
-    return new List<Corte>(tabela.FindAll().OrderBy(d => d.Nome));
+    var tabela = liteDB.GetCollection<Enviocostura>(NomeDaTabela);
+    return new List<Enviocostura>(tabela.FindAll().OrderBy(d => d.Nome));
   }
 
   //----------------------------------------------------------------------------
 
   public virtual void Apagar(int id)
   {
-    var collection = liteDB.GetCollection<Corte>(NomeDaTabela);
+    var collection = liteDB.GetCollection<Enviocostura>(NomeDaTabela);
     collection.Delete(id);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual void CriarOuAtualizar(Corte corte)
+  public virtual void CriarOuAtualizar(Enviocostura enviocostura)
   {
-    var collection = liteDB.GetCollection<Corte>(NomeDaTabela);
-    collection.Upsert(corte);
+    var collection = liteDB.GetCollection<Enviocostura>(NomeDaTabela);
+    collection.Upsert(enviocostura);
   }
 
   //----------------------------------------------------------------------------

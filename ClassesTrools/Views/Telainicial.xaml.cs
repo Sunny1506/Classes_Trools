@@ -57,6 +57,18 @@ namespace ClassesTrools.Views
             Application.Current.MainPage = new Listacortadores();
 
         }
+         private void ButtonCostureirosButtonClicked(object sender, EventArgs args)
+        {
+
+            Application.Current.MainPage = new Listacostureiros();
+
+        }
+         private void ButtonAcabamentistasButtonClicked(object sender, EventArgs args)
+        {
+
+            Application.Current.MainPage = new Listaacabamentistas();
+
+        }
 
 
     }

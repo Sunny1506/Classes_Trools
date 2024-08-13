@@ -1,23 +1,47 @@
 using Modelos;
-namespace Controles
+
+namespace Controles;
+
+public class AcabamentoControle : BaseControle
 {
-    public class AcabamentoControle : ControleBase
-    {
-        public virtual void Criar (Registro r)
-        {
+  //----------------------------------------------------------------------------
 
-        }
-        public virtual void Atualizar (Registro r)
-        {
+  public AcabamentoControle() : base()
+  {
+    NomeDaTabela = "Acabamentista";
+  }
 
-        }
-        public virtual void Apagar (int id)
-        {
+  //----------------------------------------------------------------------------
 
-        }
-        public virtual Registro Ler (int id)
-        {
-            return null;
-        }
-    }
+  public virtual Registro? Ler(int id)
+  {
+    var collection = liteDB.GetCollection<Acabamento>(NomeDaTabela);
+    return collection.FindOne(d => d.Id == id);
+  }
+
+  //----------------------------------------------------------------------------
+
+  public virtual List<Acabamento>? LerTodos()
+  {
+    var tabela = liteDB.GetCollection<Acabamento>(NomeDaTabela);
+    return new List<Acabamento>(tabela.FindAll().OrderBy(d => d.Nome));
+  }
+
+  //----------------------------------------------------------------------------
+
+  public virtual void Apagar(int id)
+  {
+    var collection = liteDB.GetCollection<Acabamento>(NomeDaTabela);
+    collection.Delete(id);
+  }
+
+  //----------------------------------------------------------------------------
+
+  public virtual void CriarOuAtualizar(Acabamento acabamento)
+  {
+    var collection = liteDB.GetCollection<Acabamento>(NomeDaTabela);
+    collection.Upsert(acabamento);
+  }
+
+  //----------------------------------------------------------------------------
 }

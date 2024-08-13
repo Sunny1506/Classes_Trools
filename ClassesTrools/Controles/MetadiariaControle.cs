@@ -1,23 +1,47 @@
 using Modelos;
-namespace Controles
+
+namespace Controles;
+
+public class MetaControle : BaseControle
 {
-    public class MetadiariaControle : ControleBase
-    {
-        public virtual void Criar (Registro r)
-        {
+  //----------------------------------------------------------------------------
 
-        }
-        public virtual void Atualizar (Registro r)
-        {
+  public MetaControle  () : base()
+  {
+    NomeDaTabela = "Meta";
+  }
 
-        }
-        public virtual void Apagar (int id)
-        {
+  //----------------------------------------------------------------------------
 
-        }
-        public virtual Registro Ler (int id)
-        {
-            return null;
-        }
-    }
+  public virtual Registro? Ler(int id)
+  {
+    var collection = liteDB.GetCollection<Meta>(NomeDaTabela);
+    return collection.FindOne(d => d.Id == id);
+  }
+
+  //----------------------------------------------------------------------------
+
+  public virtual List<Meta? LerTodos()
+  {
+    var tabela = liteDB.GetCollection<Meta>(NomeDaTabela);
+    return new List<Meta>(tabela.FindAll().OrderBy(d => d.Nome));
+  }
+
+  //----------------------------------------------------------------------------
+
+  public virtual void Apagar(int id)
+  {
+    var collection = liteDB.GetCollection<Meta>(NomeDaTabela);
+    collection.Delete(id);
+  }
+
+  //----------------------------------------------------------------------------
+
+  public virtual void CriarOuAtualizar(Meta meta)
+  {
+    var collection = liteDB.GetCollection<Meta>(NomeDaTabela);
+    collection.Upsert(meta);
+  }
+
+  //----------------------------------------------------------------------------
 }

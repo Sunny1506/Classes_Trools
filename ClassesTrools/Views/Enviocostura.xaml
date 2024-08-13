@@ -7,6 +7,12 @@
     <ScrollView>
         <StackLayout Padding="20"
                 BackgroundColor="#DAD0E1">
+                 <Button Text="VOLTAR"
+                    Clicked="ButtonVoltarButtonClicked"
+                    BackgroundColor="#8A2BE2"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start"/>
 
             <Image Source="styleroxo.png"
                     HorizontalOptions="Center"
@@ -25,10 +31,7 @@
                     <ColumnDefinition Width="50"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Text="+"
-                        Grid.Column="1"
-                        BackgroundColor="Purple"
-                        TextColor="White"/>
+               
             </Grid>
             <Picker Title="COSTUREIRO"
                     BackgroundColor="White"
@@ -66,9 +69,11 @@
                 <Button Text="CANCELAR"
                         BackgroundColor="#9f58f5"
                         TextColor="White"
+                        Clicked="ButtonVoltarTelaButtonClicked"
                         Margin="0,0,10,0"/>
-                <Button Text="SALVAR PROGRESSO"
-                        BackgroundColor="Purple"
+                <Button Text="ENVIAR"
+                        BackgroundColor="#cd5ff5"
+                         Clicked="ButtonSalvarButtonClicked"
                         TextColor="White"/>
             </StackLayout>
 

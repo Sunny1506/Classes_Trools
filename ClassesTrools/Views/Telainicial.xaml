@@ -4,90 +4,111 @@
              x:Class="ClassesTrools.Views.Telainicial"
              Shell.NavBarIsVisible="false">
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        <Grid>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-        <StackLayout BackgroundColor="#EAEAEA"
-                Padding="10">
-            <Image Source="styleroxo.png"
-                    HeightRequest="200"/>
-            <BoxView HeightRequest="1"
-                    BackgroundColor="Purple"
-                    Margin="0,10,0,10"/>
+                <ScrollView Orientation="Vertical"
+                            BackgroundColor="#EAEAEA"
+                            Padding="10">
+                        <StackLayout>
+                                <Image Source="styleroxo.png"
+                                       HeightRequest="200"/>
+                                <BoxView HeightRequest="1"
+                                         BackgroundColor="Purple"
+                                         Margin="0,10,0,10"/>
 
-            <StackLayout>
-                <Button Text="CLIENTE"
-                        Clicked="ButtonClienteButtonClicked"
-                        ImageSource="clientes.png"
-                        HorizontalOptions="Start"
-                        VerticalOptions="Center"
-                        BackgroundColor="Transparent"
-                        TextColor="Black"
-                        FontAttributes="Bold"/>
-                <Button Text="PRODUTOS"
-                        Clicked="ButtonProdutoButtonClicked"
-                        ImageSource="produtos.png"
-                        HorizontalOptions="Start"
-                        VerticalOptions="Center"
-                        BackgroundColor="Transparent"
-                        TextColor="Black"
-                        FontAttributes="Bold"/>
-                <Button Text="MÉDIA DIÁRIA"
-                        Clicked="ButtonMetaButtonClicked"
-                        ImageSource="meta.png"
-                        HorizontalOptions="Start"
-                        VerticalOptions="Center"
-                        BackgroundColor="Transparent"
-                        TextColor="Black"
-                        FontAttributes="Bold"/>
-                <Button Text="ENVIO CORTE"
-                        Clicked="ButtonEnviocorteButtonClicked"
-                        ImageSource="cortador.png"
-                        HorizontalOptions="Start"
-                        VerticalOptions="Center"
-                        BackgroundColor="Transparent"
-                        TextColor="Black"
-                        FontAttributes="Bold"/>
-                <Button Text="ENVIO COSTURA"
-                        Clicked="ButtonEnviocosturaButtonClicked"
-                        ImageSource="costureiros.png"
-                        HorizontalOptions="Start"
-                        VerticalOptions="Center"
-                        BackgroundColor="Transparent"
-                        TextColor="Black"
-                        FontAttributes="Bold"/>
-                <Button Text="ENVIO ACABAMENTO"
-                        Clicked="ButtonEnvioacabamentoButtonClicked"
-                        ImageSource="acabamentistas.png"
-                        HorizontalOptions="Start"
-                        VerticalOptions="Center"
-                        BackgroundColor="Transparent"
-                        TextColor="Black"
-                        FontAttributes="Bold"/>
-                <Button Text="VENDAS"
-                        Clicked="ButtonVendasButtonClicked"
-                        ImageSource="vendas.png"
-                        HorizontalOptions="Start"
-                        VerticalOptions="Center"
-                        BackgroundColor="Transparent"
-                        TextColor="Black"
-                        FontAttributes="Bold"/>
-                        <Button Text="CORTADORES"
-                        Clicked="ButtonCortadoresButtonClicked"
-                        ImageSource="clientes.png"
-                        HorizontalOptions="Start"
-                        VerticalOptions="Center"
-                        BackgroundColor="Transparent"
-                        TextColor="Black"
-                        FontAttributes="Bold"/>
-            </StackLayout>
-        </StackLayout>
+                                <Button Text="CLIENTE"
+                                        Clicked="ButtonClienteButtonClicked"
+                                        ImageSource="clientes.png"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Transparent"
+                                        TextColor="Black"
+                                        FontAttributes="Bold"/>
+                                <Button Text="PRODUTOS"
+                                        Clicked="ButtonProdutoButtonClicked"
+                                        ImageSource="produtos.png"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Transparent"
+                                        TextColor="Black"
+                                        FontAttributes="Bold"/>
+                                <Button Text="MÉDIA DIÁRIA"
+                                        Clicked="ButtonMetaButtonClicked"
+                                        ImageSource="meta.png"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Transparent"
+                                        TextColor="Black"
+                                        FontAttributes="Bold"/>
+                                <Button Text="ENVIO CORTE"
+                                        Clicked="ButtonEnviocorteButtonClicked"
+                                        ImageSource="corte.png"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Transparent"
+                                        TextColor="Black"
+                                        FontAttributes="Bold"/>
+                                <Button Text="ENVIO COSTURA"
+                                        Clicked="ButtonEnviocosturaButtonClicked"
+                                        ImageSource="costura.png"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Transparent"
+                                        TextColor="Black"
+                                        FontAttributes="Bold"/>
+                                <Button Text="ENVIO ACABAMENTO"
+                                        Clicked="ButtonEnvioacabamentoButtonClicked"
+                                        ImageSource="acabamento.png"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Transparent"
+                                        TextColor="Black"
+                                        FontAttributes="Bold"/>
+                                <Button Text="VENDAS"
+                                        Clicked="ButtonVendasButtonClicked"
+                                        ImageSource="vendas.png"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Transparent"
+                                        TextColor="Black"
+                                        FontAttributes="Bold"/>
+                                <Button Text="CORTADORES"
+                                        HeightRequest="60"
+                                        Clicked="ButtonCortadoresButtonClicked"
+                                        ImageSource="cortador.png"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Transparent"
+                                        TextColor="Black"
+                                        FontAttributes="Bold"/>
+                                <Button Text="COSTUREIROS"
+                                        HeightRequest="60"
+                                        Clicked="ButtonCostureirosButtonClicked"
+                                        ImageSource="costureiro.png"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Transparent"
+                                        TextColor="Black"
+                                        FontAttributes="Bold"/>
+                                <Button Text="ACABAMENTISTAS"
+                                        HeightRequest="60"
+                                        Clicked="ButtonAcabamentistasButtonClicked"
+                                        ImageSource="acabamentista.png"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Transparent"
+                                        TextColor="Black"
+                                        FontAttributes="Bold"/>
+                        </StackLayout>
+                </ScrollView>
 
-        <Image Grid.Column="1"
-                Source="background.png"
-                Aspect="AspectFill"/>
-    </Grid>
+
+                <Image Grid.Column="1"
+                       Source="background.png"
+                       Aspect="AspectFill"/>
+        </Grid>
 </ContentPage>

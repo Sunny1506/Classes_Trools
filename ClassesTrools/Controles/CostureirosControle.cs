@@ -1,23 +1,47 @@
 using Modelos;
-namespace Controles
+
+namespace Controles;
+
+public class CostureirosControle : BaseControle
 {
-    public class CostureirosControle : ControleBase
-    {
-        public virtual void Criar (Registro r)
-        {
+  //----------------------------------------------------------------------------
 
-        }
-        public virtual void Atualizar (Registro r)
-        {
+  public CostureirosControle() : base()
+  {
+    NomeDaTabela = "Costureiros";
+  }
 
-        }
-        public virtual void Apagar (int id)
-        {
+  //----------------------------------------------------------------------------
 
-        }
-        public virtual Registro Ler (int id)
-        {
-            return null;
-        }
-    }
+  public virtual Registro? Ler(int id)
+  {
+    var collection = liteDB.GetCollection<Costureiros>(NomeDaTabela);
+    return collection.FindOne(d => d.Id == id);
+  }
+
+  //----------------------------------------------------------------------------
+
+  public virtual List<Costureiros? LerTodos()
+  {
+    var tabela = liteDB.GetCollection<Costureiros>(NomeDaTabela);
+    return new List<Costureiros>(tabela.FindAll().OrderBy(d => d.Nome));
+  }
+
+  //----------------------------------------------------------------------------
+
+  public virtual void Apagar(int id)
+  {
+    var collection = liteDB.GetCollection<Costureiros>(NomeDaTabela);
+    collection.Delete(id);
+  }
+
+  //----------------------------------------------------------------------------
+
+  public virtual void CriarOuAtualizar(Costureiros costureiros)
+  {
+    var collection = liteDB.GetCollection<Costureiros>(NomeDaTabela);
+    collection.Upsert(costureiros);
+  }
+
+  //----------------------------------------------------------------------------
 }

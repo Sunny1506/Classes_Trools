@@ -17,7 +17,7 @@ namespace ClassesTrools.Views
         private void ButtonCadastroButtonClicked(object sender, EventArgs args)
         {
 
-            Application.Current.MainPage = new Cadastrocliente();
+            Application.Current.MainPage = new Cadastrocostureiro();
 
         }
         private async void ButtonExcluirButtonClicked(object sender, EventArgs args)

@@ -16,20 +16,32 @@ namespace ClassesTrools.Views
 
             }
         }
-        private async void ButtonVoltarButtonClicked (object sender, EventArgs args)
+       
+        
+         private async void ButtonSalvarButtonClicked(object sender, EventArgs args)
+        {
+            var resposta = await DisplayAlert("SALVAR", "DESEJA SALVAR?", "SIM", "NÃO");
+            if (resposta)
+            {
+                Application.Current.MainPage = new Listacostureiros();
+            }
+        }
+        private async void ButtonVoltarTelaButtonClicked(object sender, EventArgs args)
+        {
+            var resposta = await DisplayAlert("VOLTAR", "DESEJA VOLTAR? É POSSÍVEL QUE AS INFORMAÇÕES NÃO SEJAM SALVAS", "VOLTAR", "CANCELAR");
+            if (resposta)
+            {
+                Application.Current.MainPage = new Enviocorte();
+            }
+
+        }
+         private async void ButtonVoltarButtonClicked(object sender, EventArgs args)
         {
             var resposta = await DisplayAlert("CANCELAR", "DESEJA VOLTAR? É POSSÍVEL QUE AS INFORMAÇÕES NÃO SEJAM SALVAS", "VOLTAR", "CANCELAR");
             if (resposta)
             {
-                    Application.Current.MainPage = new Telainicial();
+                Application.Current.MainPage = new Telainicial();
             }
-
-        }
-         private void ButtonCortadoresButtonClicked(object sender, EventArgs args)
-        {
-var page = new Listacortadores();
-page.Paraondevoltar = new Enviocorte();
-            Application.Current.MainPage = page;
 
         }
        
