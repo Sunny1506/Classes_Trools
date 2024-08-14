@@ -21,10 +21,10 @@ public class CosturaControle : BaseControle
 
   //----------------------------------------------------------------------------
 
-  public virtual List<Costura? LerTodos()
+  public virtual List<Costura>? LerTodos()
   {
     var tabela = liteDB.GetCollection<Costura>(NomeDaTabela);
-    return new List<Costura>(tabela.FindAll().OrderBy(d => d.Nome));
+    return new List<Costura>(tabela.FindAll());
   }
 
   //----------------------------------------------------------------------------

@@ -20,12 +20,6 @@ namespace ClassesTrools.Views
             Application.Current.MainPage = new Listaprodutos();
 
         }
-        private void ButtonMetaButtonClicked(object sender, EventArgs args)
-        {
-
-            Application.Current.MainPage = new Metadiaria();
-
-        }
         private void ButtonEnviocorteButtonClicked(object sender, EventArgs args)
         {
 

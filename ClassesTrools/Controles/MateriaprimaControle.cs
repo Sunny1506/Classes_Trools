@@ -21,10 +21,10 @@ public class MateriaprimaControle : BaseControle
 
   //----------------------------------------------------------------------------
 
-  public virtual List<Materiaprima? LerTodos()
+  public virtual List<Materiaprima>? LerTodos()
   {
     var tabela = liteDB.GetCollection<Materiaprima>(NomeDaTabela);
-    return new List<Materiaprima>(tabela.FindAll().OrderBy(d => d.Nome));
+    return new List<Materiaprima>(tabela.FindAll());
   }
 
   //----------------------------------------------------------------------------

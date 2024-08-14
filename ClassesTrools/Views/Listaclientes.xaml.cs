@@ -9,6 +9,12 @@ namespace ClassesTrools.Views
         {
             InitializeComponent();
         }
+       // void QuandoSelecionarUmItemNaLista(object sender, SelectedItemChangedEventArgs e)
+        //{
+            // var page = new CadastroCliente();
+            //  page.cliente = e.SelectedItem as Cliente;
+            //   Application.Current.MainPage = page;
+      //  }
 
 
         private void ButtonVoltarButtonClicked(object sender, EventArgs args)

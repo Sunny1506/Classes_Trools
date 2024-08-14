@@ -36,14 +36,6 @@
                                         BackgroundColor="Transparent"
                                         TextColor="Black"
                                         FontAttributes="Bold"/>
-                                <Button Text="MÉDIA DIÁRIA"
-                                        Clicked="ButtonMetaButtonClicked"
-                                        ImageSource="meta.png"
-                                        HorizontalOptions="Start"
-                                        VerticalOptions="Center"
-                                        BackgroundColor="Transparent"
-                                        TextColor="Black"
-                                        FontAttributes="Bold"/>
                                 <Button Text="ENVIO CORTE"
                                         Clicked="ButtonEnviocorteButtonClicked"
                                         ImageSource="corte.png"

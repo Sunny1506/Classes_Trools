@@ -4,9 +4,168 @@
              x:Class="ClassesTrools.Views.Listaclientes"
              BackgroundColor="#DAD0E1"
              Shell.NavBarIsVisible="false">
-       <ScrollView>
+       <VerticalStackLayout>
+              <Button Text="VOLTAR"
+                      Clicked="ButtonVoltarButtonClicked"
+                      BackgroundColor="#8A2BE2"
+                      Margin="20,20,20,20"
+                      TextColor="White"
+                      FontAttributes="Bold"
+                      HorizontalOptions="Start"/>
+              <Image Source="styleroxo.png"
+                     HorizontalOptions="Center"
+                     HeightRequest="200"/>
+              <Label Text="CLIENTES"
+                     Margin="20,20,20,20"
+                     FontAttributes="Bold"
+                     FontSize="24"
+                     HorizontalOptions="Start"/>
+              <ListView x:Name="ListaClientes"
+                        HasUnevenRows="True"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+                     <ListView.ItemTemplate>
+                            <DataTemplate>
+                                   <ViewCell>
+                                          <ScrollView>
+                                                 <VerticalStackLayout Spacing="10">
+
+                                                        <StackLayout BackgroundColor="#E6E6FA"
+                                                                     Padding="10"
+                                                                     Orientation="Horizontal"
+                                                                     Spacing="10">
+                                                               <Label Text="000"
+                                                                      WidthRequest="50"
+                                                                      VerticalOptions="Center"/>
+                                                               <Label Text="NOME DO CLIENTE"
+                                                                      HorizontalOptions="FillAndExpand"
+                                                                      VerticalOptions="Center"/>
+                                                               <Label Text="CNPJ"
+                                                                      HorizontalOptions="FillAndExpand"
+                                                                      VerticalOptions="Center"/>
+                                                               <Label Text="DATA DE CADASTRO"
+                                                                      HorizontalOptions="FillAndExpand"
+                                                                      VerticalOptions="Center"/>
+                                                               <ImageButton Source="olho.png"
+                                                                            Padding="10"
+                                                                            HeightRequest="20"
+                                                                            WidthRequest="20"
+                                                                            CornerRadius="10"
+                                                                            BackgroundColor="#d184fa"/>
+                                                               <ImageButton Source="lapis.png"
+                                                                            Padding="10"
+                                                                            HeightRequest="20"
+                                                                            WidthRequest="20"
+                                                                            CornerRadius="10"
+                                                                            BackgroundColor="#d184fa"/>
+                                                               <ImageButton Source="lixo.png"
+                                                                            Clicked="ButtonExcluirButtonClicked"
+                                                                            Padding="10"
+                                                                            HeightRequest="20"
+                                                                            WidthRequest="20"
+                                                                            CornerRadius="10"
+                                                                            BackgroundColor="#d184fa"/>
+
+                                                        </StackLayout>
+                                                        <StackLayout BackgroundColor="#E6E6FA"
+                                                                     Padding="10"
+                                                                     Orientation="Horizontal"
+                                                                     Spacing="10">
+                                                               <Label Text="000"
+                                                                      WidthRequest="50"
+                                                                      VerticalOptions="Center"/>
+                                                               <Label Text="NOME DO CLIENTE"
+                                                                      HorizontalOptions="FillAndExpand"
+                                                                      VerticalOptions="Center"/>
+                                                               <Label Text="CNPJ"
+                                                                      HorizontalOptions="FillAndExpand"
+                                                                      VerticalOptions="Center"/>
+                                                               <Label Text="DATA DE CADASTRO"
+                                                                      HorizontalOptions="FillAndExpand"
+                                                                      VerticalOptions="Center"/>
+                                                               <ImageButton Source="olho.png"
+                                                                            Padding="10"
+                                                                            HeightRequest="20"
+                                                                            WidthRequest="20"
+                                                                            CornerRadius="10"
+                                                                            BackgroundColor="#d184fa"/>
+                                                               <ImageButton Source="lapis.png"
+                                                                            Padding="10"
+                                                                            HeightRequest="20"
+                                                                            WidthRequest="20"
+                                                                            CornerRadius="10"
+                                                                            BackgroundColor="#d184fa"/>
+                                                               <ImageButton Source="lixo.png"
+                                                                            Padding="10"
+                                                                            Clicked="ButtonExcluirButtonClicked"
+                                                                            HeightRequest="20"
+                                                                            WidthRequest="20"
+                                                                            CornerRadius="10"
+                                                                            BackgroundColor="#d184fa"/>
+
+                                                        </StackLayout>
+                                                        <StackLayout BackgroundColor="#E6E6FA"
+                                                                     Padding="10"
+                                                                     Orientation="Horizontal"
+                                                                     Spacing="10">
+                                                               <Label Text="000"
+                                                                      WidthRequest="50"
+                                                                      VerticalOptions="Center"/>
+                                                               <Label Text="NOME DO CLIENTE"
+                                                                      HorizontalOptions="FillAndExpand"
+                                                                      VerticalOptions="Center"/>
+                                                               <Label Text="CNPJ"
+                                                                      HorizontalOptions="FillAndExpand"
+                                                                      VerticalOptions="Center"/>
+                                                               <Label Text="DATA DE CADASTRO"
+                                                                      HorizontalOptions="FillAndExpand"
+                                                                      VerticalOptions="Center"/>
+                                                               <ImageButton Source="olho.png"
+                                                                            Padding="10"
+                                                                            HeightRequest="20"
+                                                                            WidthRequest="20"
+                                                                            CornerRadius="10"
+                                                                            BackgroundColor="#d184fa"/>
+                                                               <ImageButton Source="lapis.png"
+                                                                            Padding="10"
+                                                                            HeightRequest="20"
+                                                                            WidthRequest="20"
+                                                                            CornerRadius="10"
+                                                                            BackgroundColor="#d184fa"/>
+                                                               <ImageButton Source="lixo.png"
+                                                                            Clicked="ButtonExcluirButtonClicked"
+                                                                            Padding="10"
+                                                                            HeightRequest="20"
+                                                                            WidthRequest="20"
+                                                                            CornerRadius="10"
+                                                                            BackgroundColor="#d184fa"/>
+                                                               <ImageButton Source="lapis.png"
+                                                                            Padding="10"
+                                                                            HeightRequest="20"
+                                                                            WidthRequest="20"
+                                                                            CornerRadius="10"
+                                                                            BackgroundColor="#d184fa"/>
+                                                               <ImageButton Source="lixo.png"
+                                                                            Clicked="ButtonExcluirButtonClicked"
+                                                                            Padding="10"
+                                                                            HeightRequest="20"
+                                                                            WidthRequest="20"
+                                                                            CornerRadius="10"
+                                                                            BackgroundColor="#d184fa"/>
+
+                                                        </StackLayout>
+                                                 </VerticalStackLayout>
+                                          </ScrollView>
+                                   </ViewCell>
+                            </DataTemplate>
+                     </ListView.ItemTemplate>
+              </ListView>
+       </VerticalStackLayout>
+</ContentPage>
+
+<!-- <ScrollView>
               <Grid Padding="20">
-                     <VerticalStackLayout Spacing="20">
+               <VerticalStackLayout Spacing="20">
                             <Button Text="VOLTAR"
                                     Clicked="ButtonVoltarButtonClicked"
                                     BackgroundColor="#8A2BE2"
@@ -40,7 +199,7 @@
                             </HorizontalStackLayout>
                             <ScrollView>
                                    <VerticalStackLayout Spacing="10">
-                                          <!-- Repeat this StackLayout for each client -->
+                                          
                                           <StackLayout BackgroundColor="#E6E6FA"
                                                        Padding="10"
                                                        Orientation="Horizontal"
@@ -189,10 +348,10 @@
                                                               BackgroundColor="#d184fa"/>
 
                                           </StackLayout>
-                                          <!-- Repeat ends here -->
-                                   </VerticalStackLayout>
-                            </ScrollView>
-                     </VerticalStackLayout>
-              </Grid>
-       </ScrollView>
-</ContentPage>
+                                         
+</VerticalStackLayout>
+</ScrollView>
+</VerticalStackLayout>
+</Grid>
+</ScrollView>
+</ContentPage> -->

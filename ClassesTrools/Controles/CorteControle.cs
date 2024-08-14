@@ -21,10 +21,10 @@ public class CorteControle : BaseControle
 
   //----------------------------------------------------------------------------
 
-  public virtual List<Corte? LerTodos()
+  public virtual List<Corte>? LerTodos()
   {
     var tabela = liteDB.GetCollection<Corte>(NomeDaTabela);
-    return new List<Corte>(tabela.FindAll().OrderBy(d => d.Nome));
+    return new List<Corte>(tabela.FindAll());
   }
 
   //----------------------------------------------------------------------------

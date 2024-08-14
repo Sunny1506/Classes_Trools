@@ -3,45 +3,45 @@ using Modelos;
 
 namespace Controles;
 
-public class ClienteControle : BaseControle
+public class ClientesControle : BaseControle
 {
   //----------------------------------------------------------------------------
 
-  public ClienteControle() : base()
+  public ClientesControle() : base()
   {
     NomeDaTabela = "Clientes";
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual Registro? Ler(int idCliente)
+  public virtual Registro? Ler(int id)
   {
-    var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
-    return collection.FindOne(d => d.Id == idCliente);
+    var collection = liteDB.GetCollection<Clientes>(NomeDaTabela);
+    return collection.FindOne(d => d.Id == id);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual List<Cliente>? LerTodos()
+  public virtual List<Clientes>? LerTodos()
   {
-    var tabela = liteDB.GetCollection<Cliente>(NomeDaTabela);
-    return new List<Cliente>(tabela.FindAll().OrderBy(d => d.Sobrenome));
+    var tabela = liteDB.GetCollection<Clientes>(NomeDaTabela);
+    return new List<Clientes>(tabela.FindAll().OrderBy(d => d.Nome));
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual void Apagar(int idCliente)
+  public virtual void Apagar(int id)
   {
-    var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
-    collection.Delete(idCliente);
+    var collection = liteDB.GetCollection<Clientes>(NomeDaTabela);
+    collection.Delete(id);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual void CriarOuAtualizar(Cliente cliente)
+  public virtual void CriarOuAtualizar(Clientes clientes)
   {
-    var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
-    collection.Upsert(cliente);
+    var collection = liteDB.GetCollection<Clientes>(NomeDaTabela);
+    collection.Upsert(clientes);
   }
 
   //----------------------------------------------------------------------------

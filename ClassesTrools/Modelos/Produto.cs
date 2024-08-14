@@ -2,6 +2,7 @@ namespace Modelos
 {
    public class Produto : Registro
    {
+      public int Id { get; set; }
       public string Nome { get; set; }
       public string Nomedoproduto { get; set; }
       public string Unidade { get; set; }

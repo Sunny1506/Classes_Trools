@@ -21,7 +21,7 @@ public class CostureirosControle : BaseControle
 
   //----------------------------------------------------------------------------
 
-  public virtual List<Costureiros? LerTodos()
+  public virtual List<Costureiros>? LerTodos()
   {
     var tabela = liteDB.GetCollection<Costureiros>(NomeDaTabela);
     return new List<Costureiros>(tabela.FindAll().OrderBy(d => d.Nome));

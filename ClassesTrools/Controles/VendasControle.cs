@@ -21,10 +21,10 @@ public class VendasControle : BaseControle
 
   //----------------------------------------------------------------------------
 
-  public virtual List<Vendas? LerTodos()
+  public virtual List<Vendas>? LerTodos()
   {
     var tabela = liteDB.GetCollection<Vendas>(NomeDaTabela);
-    return new List<Vendas>(tabela.FindAll().OrderBy(d => d.Nome));
+    return new List<Vendas>(tabela.FindAll());
   }
 
   //----------------------------------------------------------------------------

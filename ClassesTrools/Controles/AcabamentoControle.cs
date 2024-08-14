@@ -24,7 +24,7 @@ public class AcabamentoControle : BaseControle
   public virtual List<Acabamento>? LerTodos()
   {
     var tabela = liteDB.GetCollection<Acabamento>(NomeDaTabela);
-    return new List<Acabamento>(tabela.FindAll().OrderBy(d => d.Nome));
+    return new List<Acabamento>(tabela.FindAll());
   }
 
   //----------------------------------------------------------------------------

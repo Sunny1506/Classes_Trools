@@ -1,9 +1,13 @@
 using Microsoft.Maui.Controls;
+using Controles;
+
+using Modelos;
 
 namespace ClassesTrools.Views
 {
     public partial class Cadastrocliente
     {
+        ClientesControle clientesControle = new ClientesControle();
         public Cadastrocliente()
         {
             InitializeComponent();
@@ -25,6 +29,17 @@ namespace ClassesTrools.Views
         }
         private async void ButtonSalvarButtonClicked(object sender, EventArgs args)
         {
+            var cliente = new Clientes();
+            cliente.Nome = NomeEntry.Text;
+            cliente.CNPJ = CNPJEntry.Text;
+            cliente.Telefone = TelEntry.Text;
+            cliente.Endereço = EndereçoEntry.Text;
+            cliente.Cidade = CidadeEntry.Text;
+            cliente.Estado = EstadoEntry.Text;
+            cliente.CEP = CEPEntry.Text;
+            cliente.Email = EmailEntry.Text;
+            clientesControle.CriarOuAtualizar(cliente);
+
             var resposta = await DisplayAlert("SALVAR", "DESEJA SALVAR?", "SIM", "NÃO");
             if (resposta)
             {
