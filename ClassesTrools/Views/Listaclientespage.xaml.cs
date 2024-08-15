@@ -1,17 +1,18 @@
 using Microsoft.Maui.Controls;
+using Modelos;
 
 
 namespace ClassesTrools.Views
 {
-public partial class Listaclientes 
+public partial class Listaclientespage 
 {
   Controles.ClientesControle clienteControle = new Controles.ClientesControle();
 
-  public Listaclientes()
+  public Listaclientespage()
 	{
 		InitializeComponent();
     // Buscamos no banco de dados, via Controle, a lista de todos os Clientes cadastrados
-    Listaclientes.ItemsSource = ClientesControle.LerTodos();
+    ListaClientes.ItemsSource = clienteControle.LerTodos();
 	}
 
   // Esse método será chamado toda vez que o usuário selecionar um cliente na lista

@@ -3,11 +3,76 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ClassesTrools.Views.Cadastrocliente"
              BackgroundColor="#DAD0E1"
-             Title="Cadastro de Clientes"
+             Title="CADASTRO DE CLIENTES"
              Shell.NavBarIsVisible="false">
 
+       <ScrollView>
+              <VerticalStackLayout Padding="20"
+                                   Spacing="10">
+                     <Button Text="VOLTAR"
+                             Clicked="VoltarClicked"
+                             BackgroundColor="#8A2BE2"
+                             Margin="10,10,10,10"
+                             TextColor="White"
+                             FontAttributes="Bold"
+                             HorizontalOptions="Start"/>
+                     <Image Source="styleroxo.png"
+                            HorizontalOptions="Center"
+                            HeightRequest="200"/>
+                     <Label Text="CADASTRO DE CLIENTES"
+                            FontSize="30"
+                            HorizontalOptions="Center"
+                            Margin="0,20,0,20"/>
+                     <Label Text="ID:"/>
+                     <Label x:Name="IdLabel"/>
+                     <Label Text="Nome:"/>
+                     <Entry Placeholder="Digite o Nome"
+                            x:Name="NomeEntry"
+                            BackgroundColor="#f7faf8"/>
+                     <Label Text="CNPJ:"/>
+                     <Entry Placeholder="Digite o CNPJ"
+                            x:Name="CNPJEntry"
+                            BackgroundColor="#f7faf8"/>
+                     <Label Text="Telefone:"/>
+                     <Entry Placeholder="Digite o Telefone"
+                            x:Name="TelefoneEntry"
+                            BackgroundColor="#f7faf8"/>
+                     <Label Text="Endereço:"/>
+                     <Entry Placeholder="Digite o Endereço"
+                            x:Name="EndereçoEntry"
+                            BackgroundColor="#f7faf8"/>
+                     <Label Text="Cidade:"/>
+                     <Entry Placeholder="Digite o Cidade"
+                            x:Name="CidadeEntry"
+                            BackgroundColor="#f7faf8"/>
+                     <Label Text="Estado:"/>
+                     <Entry Placeholder="Digite o Estado"
+                            x:Name="EstadoEntry"
+                            BackgroundColor="#f7faf8"/>
+                     <Label Text="E-mail:"/>
+                     <Entry Placeholder="Digite o E-mail"
+                            x:Name="EmailEntry"
+                            BackgroundColor="#f7faf8"/>
 
-       <StackLayout Padding="10">
+                     <HorizontalStackLayout Spacing="20"
+                                            HorizontalOptions="Center">
+                            <Button Text="LIMPAR"
+                                    BackgroundColor="#8A2BE2"
+                                    TextColor="White"
+                                    Clicked="OnApagarDadosClicked"/>
+                            <Button Text="SALVAR DADOS"
+                                    BackgroundColor="#cd5ff5"
+                                    TextColor="White"
+                                    Margin="10,0,0,0"
+                                    Clicked="OnSalvarDadosClicked"/>
+                     </HorizontalStackLayout>
+              </VerticalStackLayout>
+       </ScrollView>
+</ContentPage>
+
+
+
+<!--   <StackLayout Padding="10">
               <Image Source="styleroxo.png"
                      HorizontalOptions="Center"
                      HeightRequest="150"/>
@@ -84,4 +149,4 @@
 
               </StackLayout>
        </StackLayout>
-</ContentPage>
+</ContentPage> -->

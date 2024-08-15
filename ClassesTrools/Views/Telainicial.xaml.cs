@@ -11,7 +11,7 @@ namespace ClassesTrools.Views
         private void ButtonClienteButtonClicked(object sender, EventArgs args)
         {
 
-            Application.Current.MainPage = new Listaclientes();
+            Application.Current.MainPage = new Listaclientespage();
 
         }
         private void ButtonProdutoButtonClicked(object sender, EventArgs args)
