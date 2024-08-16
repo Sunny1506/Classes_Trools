@@ -14,7 +14,7 @@ namespace ClassesTrools.Views
             var resposta = await DisplayAlert("CANCELAR", "DESEJA VOLTAR? É POSSÍVEL QUE AS INFORMAÇÕES NÃO SEJAM SALVAS", "VOLTAR", "CANCELAR");
             if (resposta)
             {
-                Application.Current.MainPage = new Listaprodutos();
+                Application.Current.MainPage = new Relatoriovendas();
             }
         }
         private async void ButtonSalvarButtonClicked(object sender, EventArgs args)
@@ -22,7 +22,7 @@ namespace ClassesTrools.Views
             var resposta = await DisplayAlert("SALVAR", "DESEJA SALVAR?", "SIM", "NÃO");
             if (resposta)
             {
-                Application.Current.MainPage = new Listaprodutos();
+                Application.Current.MainPage = new Relatoriovendas();
             }
 
         }

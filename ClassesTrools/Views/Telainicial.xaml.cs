@@ -17,7 +17,7 @@ namespace ClassesTrools.Views
         private void ButtonProdutoButtonClicked(object sender, EventArgs args)
         {
 
-            Application.Current.MainPage = new Listaprodutos();
+            Application.Current.MainPage = new Listaprodutospage();
 
         }
         private void ButtonEnviocorteButtonClicked(object sender, EventArgs args)
@@ -60,7 +60,7 @@ namespace ClassesTrools.Views
          private void ButtonAcabamentistasButtonClicked(object sender, EventArgs args)
         {
 
-            Application.Current.MainPage = new Listaacabamentistas();
+            Application.Current.MainPage = new Listaacabamentistaspage();
 
         }
 

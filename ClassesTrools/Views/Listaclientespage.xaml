@@ -10,10 +10,16 @@
                       Margin="10,10,10,10"
                       TextColor="White"
                       FontAttributes="Bold"
-                      HorizontalOptions="Start"/>
+                      HorizontalOptions="Start"
+                      Clicked="ButtonVoltarButtonClicked"/>
               <Image Source="styleroxo.png"
                      HorizontalOptions="Center"
                      HeightRequest="200"/>
+              <Label Text="CLIENTES"
+                     FontAttributes="Bold"
+                     FontSize="30"
+                     Margin="10,10,10,10"
+                     HorizontalOptions="Center"/>
               <Button Text="Criar Novo Cliente"
                       BackgroundColor="#8A2BE2"
                       FontSize="16"
