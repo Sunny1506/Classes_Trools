@@ -41,20 +41,20 @@ namespace ClassesTrools.Views
         private void ButtonVendasButtonClicked(object sender, EventArgs args)
         {
 
-            Application.Current.MainPage = new Relatoriovendas();
+            Application.Current.MainPage = new Relatoriovendaspage();
 
         }
 
         private void ButtonCortadoresButtonClicked(object sender, EventArgs args)
         {
 
-            Application.Current.MainPage = new Listacortadores();
+            Application.Current.MainPage = new Listacortadorespage();
 
         }
          private void ButtonCostureirosButtonClicked(object sender, EventArgs args)
         {
 
-            Application.Current.MainPage = new Listacostureiros();
+            Application.Current.MainPage = new Listacostureirospage();
 
         }
          private void ButtonAcabamentistasButtonClicked(object sender, EventArgs args)

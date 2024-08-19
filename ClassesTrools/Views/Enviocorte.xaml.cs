@@ -23,7 +23,7 @@ namespace ClassesTrools.Views
             var resposta = await DisplayAlert("SALVAR", "DESEJA SALVAR?", "SIM", "NÃO");
             if (resposta)
             {
-                Application.Current.MainPage = new Listacostureiros();
+                Application.Current.MainPage = new Listacostureirospage();
             }
         }
         private async void ButtonVoltarTelaButtonClicked(object sender, EventArgs args)

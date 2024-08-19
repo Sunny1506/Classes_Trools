@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClassesTrools.Views.Cadastrocostureiropage"
+            BackgroundColor="#DAD0E1"
+             Shell.NavBarIsVisible="false">
+        <ScrollView>
+                <VerticalStackLayout Padding="20"
+                                     Spacing="10">
+                        <Button Text="VOLTAR"
+                                Clicked="VoltarClicked"
+                                BackgroundColor="#8A2BE2"
+                                Margin="10,10,10,10"
+                                TextColor="White"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"/>
+                        <Image Source="styleroxo.png"
+                               HorizontalOptions="Center"
+                               HeightRequest="200"/>
+                        <Label Text="CADASTRO DE COSTUREIROS"
+                               FontSize="30"
+                               HorizontalOptions="Center"
+                               Margin="0,20,0,20"/>
+                        <Label Text="ID:"/>
+                        <Label x:Name="IdLabel"/>
+                        <Label Text="Nome do cortador:"/>
+                        <Entry Placeholder="Digite o Nome do costureiro"
+                               x:Name="NomeEntry"
+                               BackgroundColor="#f7faf8"/>
+                        <Label Text="Telefone:"/>
+                        <Entry Placeholder="Digite o telefone"
+                               x:Name="TelefoneEntry"
+                               BackgroundColor="#f7faf8"/>
+
+                        <HorizontalStackLayout Spacing="20"
+                                               HorizontalOptions="Center">
+                                <Button Text="LIMPAR"
+                                        BackgroundColor="#8A2BE2"
+                                        TextColor="White"
+                                        Clicked="OnApagarDadosClicked"/>
+                                <Button Text="SALVAR DADOS"
+                                        BackgroundColor="#cd5ff5"
+                                        TextColor="White"
+                                        Margin="10,0,0,0"
+                                        Clicked="OnSalvarDadosClicked"/>
+                        </HorizontalStackLayout>
+                </VerticalStackLayout>
+        </ScrollView>
+</ContentPage>
