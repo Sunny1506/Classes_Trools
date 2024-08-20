@@ -2,45 +2,45 @@ using Modelos;
 
 namespace Controles;
 
-public class EnvioacabamentoControle : BaseControle
+public class EnviocorteControle : BaseControle
 {
   //----------------------------------------------------------------------------
 
-  public EnvioacabamentoControle() : base()
+  public EnviocorteControle() : base()
   {
-    NomeDaTabela = "Envioacabamento";
+    NomeDaTabela = "Enviocorte";
   }
 
   //----------------------------------------------------------------------------
 
   public virtual Registro? Ler(int id)
   {
-    var collection = liteDB.GetCollection<Envioacabamento>(NomeDaTabela);
+    var collection = liteDB.GetCollection<Enviocorte>(NomeDaTabela);
     return collection.FindOne(d => d.Id == id);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual List<Envioacabamento>? LerTodos()
+  public virtual List<Enviocorte>? LerTodos()
   {
-    var tabela = liteDB.GetCollection<Envioacabamento>(NomeDaTabela);
-    return new List<Envioacabamento>(tabela.FindAll());
+    var tabela = liteDB.GetCollection<Enviocorte>(NomeDaTabela);
+    return new List<Enviocorte>(tabela.FindAll());
   }
 
   //----------------------------------------------------------------------------
 
   public virtual void Apagar(int id)
   {
-    var collection = liteDB.GetCollection<Envioacabamento>(NomeDaTabela);
+    var collection = liteDB.GetCollection<Enviocorte>(NomeDaTabela);
     collection.Delete(id);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual void CriarOuAtualizar(Envioacabamento envioacabamento)
+  public virtual void CriarOuAtualizar(Enviocorte enviocorte)
   {
-    var collection = liteDB.GetCollection<Envioacabamento>(NomeDaTabela);
-    collection.Upsert(envioacabamento);
+    var collection = liteDB.GetCollection<Enviocorte>(NomeDaTabela);
+    collection.Upsert(enviocorte);
   }
 
   //----------------------------------------------------------------------------

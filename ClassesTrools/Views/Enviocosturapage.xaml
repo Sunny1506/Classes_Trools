@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ClassesTrools.Views.Envioacabamentopage"
+             x:Class="ClassesTrools.Views.Enviocosturapage"
              BackgroundColor="#DAD0E1"
              Shell.NavBarIsVisible="false">
     <ScrollView>
@@ -17,7 +17,7 @@
             <Image Source="styleroxo.png"
                    HorizontalOptions="Center"
                    HeightRequest="200"/>
-            <Label Text="ENVIO PARA ACABAMENTO"
+            <Label Text="ENVIO PARA COSTURA"
                    FontSize="24"
                    FontAttributes="Bold"
                    TextColor="Black"
@@ -34,8 +34,8 @@
 
 
             <Picker
-                x:Name="AcabamentistaPicker"
-                Title="ACABAMENTISTA"
+                x:Name="CostureiroPicker"
+                Title="COSTUREIRO"
                 BackgroundColor="White"
                 Margin="0,0,0,20">
             </Picker>
@@ -68,4 +68,3 @@
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
-

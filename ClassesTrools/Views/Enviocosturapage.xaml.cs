@@ -5,18 +5,18 @@ using Modelos;
 
 namespace ClassesTrools.Views
 {
-  public partial class Envioacabamentopage : ContentPage
+  public partial class Enviocosturapage : ContentPage
   {
     //--------------------------------------------------------------------------------------------------
     // Esse atributo "cliente" serve para a ListaClientes informar qual Cliente foi clicado na lista.
     // Será usado para preencher as Entry's com os dados do Cliente, assim como para ser enviado para o 
     // ClienteControle que irá criar/atualizar o Banco de Dados
-    public Envioacabamento envioacabamento{ get; set; }
-    Controles.EnvioacabamentoControle envioacabamentoControle = new Controles.EnvioacabamentoControle();
+    public Enviocostura enviocostura{ get; set; }
+    Controles.EnviocosturaControle enviocosturaControle = new Controles.EnviocosturaControle();
 
     //--------------------------------------------------------------------------------------------------
 
-    public Envioacabamentopage()
+    public Enviocosturapage()
     {
       InitializeComponent();
     }
@@ -27,8 +27,8 @@ namespace ClassesTrools.Views
     {
       Application.Current.MainPage = new Telainicial();
 
-      AcabamentistaPicker.ItemsSource =envioacabamentoControle.LerTodos();
-      MateriaprimaPicker.ItemsSource = envioacabamentoControle.LerTodos();
+      CostureiroPicker.ItemsSource =enviocosturaControle.LerTodos();
+      MateriaprimaPicker.ItemsSource = enviocosturaControle.LerTodos();
     }
 
     //--------------------------------------------------------------------------------------------------
@@ -38,10 +38,10 @@ namespace ClassesTrools.Views
     {
       base.OnAppearing();
 
-      if (envioacabamento != null)
+      if (enviocostura != null)
       {
-        IdLabel.Text = envioacabamento.Id.ToString();
-        QuantidadeEntry.Text = envioacabamento.Quantidade;
+        IdLabel.Text = enviocostura.Id.ToString();
+        QuantidadeEntry.Text = enviocostura.Quantidade;
 
       
 
@@ -68,19 +68,19 @@ namespace ClassesTrools.Views
       if (await VerificaSeDadosEstaoCorretos()) // Verifica se os dados são válidos antes de salvar no banco
       {
         // O código abaixo preenche o objeto cliente (Modelo) com os dados das Entry's
-       envioacabamento = new Modelos.Envioacabamento();
+       enviocostura = new Modelos.Enviocostura();
         if (!String.IsNullOrEmpty(IdLabel.Text))
-          envioacabamento.Id = int.Parse(IdLabel.Text);
+          enviocostura.Id = int.Parse(IdLabel.Text);
         else
-         envioacabamento.Id = 0;
-        envioacabamento.Quantidade = QuantidadeEntry.Text;
+         enviocostura.Id = 0;
+        enviocostura.Quantidade = QuantidadeEntry.Text;
        
        
         
 
 
         // Com o objeto preenchido enviamos para o controle para criar/atualizar no Banco de Dados
-        envioacabamentoControle.CriarOuAtualizar(envioacabamento);
+        enviocosturaControle.CriarOuAtualizar(enviocostura);
         // Mostra a mensagem de sucesso
         await DisplayAlert("Salvar", "Dados salvos com sucesso!", "OK");
       }

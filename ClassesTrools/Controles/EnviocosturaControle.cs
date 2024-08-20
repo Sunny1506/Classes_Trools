@@ -2,45 +2,45 @@ using Modelos;
 
 namespace Controles;
 
-public class EnvioacabamentoControle : BaseControle
+public class EnviocosturaControle : BaseControle
 {
   //----------------------------------------------------------------------------
 
-  public EnvioacabamentoControle() : base()
+  public EnviocosturaControle() : base()
   {
-    NomeDaTabela = "Envioacabamento";
+    NomeDaTabela = "Enviocostura";
   }
 
   //----------------------------------------------------------------------------
 
   public virtual Registro? Ler(int id)
   {
-    var collection = liteDB.GetCollection<Envioacabamento>(NomeDaTabela);
+    var collection = liteDB.GetCollection<Enviocostura>(NomeDaTabela);
     return collection.FindOne(d => d.Id == id);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual List<Envioacabamento>? LerTodos()
+  public virtual List<Enviocostura>? LerTodos()
   {
-    var tabela = liteDB.GetCollection<Envioacabamento>(NomeDaTabela);
-    return new List<Envioacabamento>(tabela.FindAll());
+    var tabela = liteDB.GetCollection<Enviocostura>(NomeDaTabela);
+    return new List<Enviocostura>(tabela.FindAll());
   }
 
   //----------------------------------------------------------------------------
 
   public virtual void Apagar(int id)
   {
-    var collection = liteDB.GetCollection<Envioacabamento>(NomeDaTabela);
+    var collection = liteDB.GetCollection<Enviocostura>(NomeDaTabela);
     collection.Delete(id);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual void CriarOuAtualizar(Envioacabamento envioacabamento)
+  public virtual void CriarOuAtualizar(Enviocostura enviocostura)
   {
-    var collection = liteDB.GetCollection<Envioacabamento>(NomeDaTabela);
-    collection.Upsert(envioacabamento);
+    var collection = liteDB.GetCollection<Enviocostura>(NomeDaTabela);
+    collection.Upsert(enviocostura);
   }
 
   //----------------------------------------------------------------------------

@@ -20,22 +20,28 @@ namespace ClassesTrools.Views
             Application.Current.MainPage = new Listaprodutospage();
 
         }
+        private void ButtonMateriaprimaButtonClicked(object sender, EventArgs args)
+        {
+
+            Application.Current.MainPage = new Materiaprimapage();
+
+        }
         private void ButtonEnviocorteButtonClicked(object sender, EventArgs args)
         {
 
-            Application.Current.MainPage = new Enviocorte();
+            Application.Current.MainPage = new Enviocortepage();
 
         }
         private void ButtonEnviocosturaButtonClicked(object sender, EventArgs args)
         {
 
-            Application.Current.MainPage = new Enviocostura();
+            Application.Current.MainPage = new Enviocosturapage();
 
         }
         private void ButtonEnvioacabamentoButtonClicked(object sender, EventArgs args)
         {
 
-            Application.Current.MainPage = new Envioacabamento();
+            Application.Current.MainPage = new Envioacabamentopage();
 
         }
         private void ButtonVendasButtonClicked(object sender, EventArgs args)

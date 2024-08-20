@@ -5,18 +5,18 @@ using Modelos;
 
 namespace ClassesTrools.Views
 {
-  public partial class Envioacabamentopage : ContentPage
+  public partial class Materiaprimapage : ContentPage
   {
     //--------------------------------------------------------------------------------------------------
     // Esse atributo "cliente" serve para a ListaClientes informar qual Cliente foi clicado na lista.
     // Será usado para preencher as Entry's com os dados do Cliente, assim como para ser enviado para o 
     // ClienteControle que irá criar/atualizar o Banco de Dados
-    public Envioacabamento envioacabamento{ get; set; }
-    Controles.EnvioacabamentoControle envioacabamentoControle = new Controles.EnvioacabamentoControle();
+    public Materiaprima materiaprima{ get; set; }
+    Controles.MateriaprimaControle materiaprimaControle = new Controles.MateriaprimaControle();
 
     //--------------------------------------------------------------------------------------------------
 
-    public Envioacabamentopage()
+    public Materiaprimapage()
     {
       InitializeComponent();
     }
@@ -27,8 +27,8 @@ namespace ClassesTrools.Views
     {
       Application.Current.MainPage = new Telainicial();
 
-      AcabamentistaPicker.ItemsSource =envioacabamentoControle.LerTodos();
-      MateriaprimaPicker.ItemsSource = envioacabamentoControle.LerTodos();
+      UnidadePicker.ItemsSource =UnidadeControle.LerTodos();
+      
     }
 
     //--------------------------------------------------------------------------------------------------
@@ -38,10 +38,10 @@ namespace ClassesTrools.Views
     {
       base.OnAppearing();
 
-      if (envioacabamento != null)
+      if (materiaprima != null)
       {
-        IdLabel.Text = envioacabamento.Id.ToString();
-        QuantidadeEntry.Text = envioacabamento.Quantidade;
+        IdLabel.Text = materiaprima.Id.ToString();
+        MaterialEntry.Text = materiaprima.Material;
 
       
 
@@ -55,7 +55,7 @@ namespace ClassesTrools.Views
     private void OnApagarDadosClicked(object sender, EventArgs e)
     {
       IdLabel.Text = string.Empty;
-      QuantidadeEntry.Text = string.Empty;
+      MaterialEntry.Text = string.Empty;
       
      
       
@@ -68,19 +68,19 @@ namespace ClassesTrools.Views
       if (await VerificaSeDadosEstaoCorretos()) // Verifica se os dados são válidos antes de salvar no banco
       {
         // O código abaixo preenche o objeto cliente (Modelo) com os dados das Entry's
-       envioacabamento = new Modelos.Envioacabamento();
+       materiaprima = new Modelos.Materiaprima();
         if (!String.IsNullOrEmpty(IdLabel.Text))
-          envioacabamento.Id = int.Parse(IdLabel.Text);
+          materiaprima.Id = int.Parse(IdLabel.Text);
         else
-         envioacabamento.Id = 0;
-        envioacabamento.Quantidade = QuantidadeEntry.Text;
+         materiaprima.Id = 0;
+        materiaprima.Material = MaterialEntry.Text;
        
        
         
 
 
         // Com o objeto preenchido enviamos para o controle para criar/atualizar no Banco de Dados
-        envioacabamentoControle.CriarOuAtualizar(envioacabamento);
+        materiaprimaControle.CriarOuAtualizar(materiaprima);
         // Mostra a mensagem de sucesso
         await DisplayAlert("Salvar", "Dados salvos com sucesso!", "OK");
       }
@@ -93,7 +93,7 @@ namespace ClassesTrools.Views
     private async Task<bool> VerificaSeDadosEstaoCorretos()
     {
       // Verifica se a Entry do Nome está vazia
-      if (String.IsNullOrEmpty(QuantidadeEntry.Text))
+      if (String.IsNullOrEmpty(MaterialEntry.Text))
       {
         await DisplayAlert("Cadastrar", "O campo Nome é obrigatório", "OK");
         return false;

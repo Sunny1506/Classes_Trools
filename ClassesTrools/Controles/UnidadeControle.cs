@@ -1,46 +1,47 @@
+
 using Modelos;
 
 namespace Controles;
 
-public class EnvioacabamentoControle : BaseControle
+public class UnidadeControle : BaseControle
 {
   //----------------------------------------------------------------------------
 
-  public EnvioacabamentoControle() : base()
+  public UnidadeControle() : base()
   {
-    NomeDaTabela = "Envioacabamento";
+    NomeDaTabela = "Unidade";
   }
 
   //----------------------------------------------------------------------------
 
   public virtual Registro? Ler(int id)
   {
-    var collection = liteDB.GetCollection<Envioacabamento>(NomeDaTabela);
+    var collection = liteDB.GetCollection<Unidade>(NomeDaTabela);
     return collection.FindOne(d => d.Id == id);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual List<Envioacabamento>? LerTodos()
+  public virtual List<Unidade>? LerTodos()
   {
-    var tabela = liteDB.GetCollection<Envioacabamento>(NomeDaTabela);
-    return new List<Envioacabamento>(tabela.FindAll());
+    var tabela = liteDB.GetCollection<Unidade>(NomeDaTabela);
+    return new List<Unidade>(tabela.FindAll());
   }
 
   //----------------------------------------------------------------------------
 
   public virtual void Apagar(int id)
   {
-    var collection = liteDB.GetCollection<Envioacabamento>(NomeDaTabela);
+    var collection = liteDB.GetCollection<Unidade>(NomeDaTabela);
     collection.Delete(id);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual void CriarOuAtualizar(Envioacabamento envioacabamento)
+  public virtual void CriarOuAtualizar(Unidade unidade)
   {
-    var collection = liteDB.GetCollection<Envioacabamento>(NomeDaTabela);
-    collection.Upsert(envioacabamento);
+    var collection = liteDB.GetCollection<Unidade>(NomeDaTabela);
+    collection.Upsert(unidade);
   }
 
   //----------------------------------------------------------------------------

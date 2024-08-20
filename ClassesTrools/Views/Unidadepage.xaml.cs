@@ -5,18 +5,18 @@ using Modelos;
 
 namespace ClassesTrools.Views
 {
-  public partial class Envioacabamentopage : ContentPage
+  public partial class Unidadepage : ContentPage
   {
     //--------------------------------------------------------------------------------------------------
     // Esse atributo "cliente" serve para a ListaClientes informar qual Cliente foi clicado na lista.
     // Será usado para preencher as Entry's com os dados do Cliente, assim como para ser enviado para o 
     // ClienteControle que irá criar/atualizar o Banco de Dados
-    public Envioacabamento envioacabamento{ get; set; }
-    Controles.EnvioacabamentoControle envioacabamentoControle = new Controles.EnvioacabamentoControle();
+    public Unidade unidade{ get; set; }
+    Controles.UnidadeControle unidadeControle = new Controles.UnidadeControle();
 
     //--------------------------------------------------------------------------------------------------
 
-    public Envioacabamentopage()
+    public Unidadepage()
     {
       InitializeComponent();
     }
@@ -27,8 +27,7 @@ namespace ClassesTrools.Views
     {
       Application.Current.MainPage = new Telainicial();
 
-      AcabamentistaPicker.ItemsSource =envioacabamentoControle.LerTodos();
-      MateriaprimaPicker.ItemsSource = envioacabamentoControle.LerTodos();
+    
     }
 
     //--------------------------------------------------------------------------------------------------
@@ -38,10 +37,10 @@ namespace ClassesTrools.Views
     {
       base.OnAppearing();
 
-      if (envioacabamento != null)
+      if (unidade != null)
       {
-        IdLabel.Text = envioacabamento.Id.ToString();
-        QuantidadeEntry.Text = envioacabamento.Quantidade;
+        IdLabel.Text = unidade.Id.ToString();
+        UnidadeEntry.Text = unidade.Unidades;
 
       
 
@@ -55,7 +54,7 @@ namespace ClassesTrools.Views
     private void OnApagarDadosClicked(object sender, EventArgs e)
     {
       IdLabel.Text = string.Empty;
-      QuantidadeEntry.Text = string.Empty;
+      UnidadeEntry.Text = string.Empty;
       
      
       
@@ -68,19 +67,19 @@ namespace ClassesTrools.Views
       if (await VerificaSeDadosEstaoCorretos()) // Verifica se os dados são válidos antes de salvar no banco
       {
         // O código abaixo preenche o objeto cliente (Modelo) com os dados das Entry's
-       envioacabamento = new Modelos.Envioacabamento();
+       unidade = new Modelos.Unidade();
         if (!String.IsNullOrEmpty(IdLabel.Text))
-          envioacabamento.Id = int.Parse(IdLabel.Text);
+          unidade.Id = int.Parse(IdLabel.Text);
         else
-         envioacabamento.Id = 0;
-        envioacabamento.Quantidade = QuantidadeEntry.Text;
+         unidade.Id = 0;
+        unidade.Unidades = UnidadeEntry.Text;
        
        
         
 
 
         // Com o objeto preenchido enviamos para o controle para criar/atualizar no Banco de Dados
-        envioacabamentoControle.CriarOuAtualizar(envioacabamento);
+        unidadeControle.CriarOuAtualizar(unidade);
         // Mostra a mensagem de sucesso
         await DisplayAlert("Salvar", "Dados salvos com sucesso!", "OK");
       }
@@ -93,7 +92,7 @@ namespace ClassesTrools.Views
     private async Task<bool> VerificaSeDadosEstaoCorretos()
     {
       // Verifica se a Entry do Nome está vazia
-      if (String.IsNullOrEmpty(QuantidadeEntry.Text))
+      if (String.IsNullOrEmpty(UnidadeEntry.Text))
       {
         await DisplayAlert("Cadastrar", "O campo Nome é obrigatório", "OK");
         return false;
