@@ -13,6 +13,7 @@ namespace ClassesTrools.Views
     // ClienteControle que irá criar/atualizar o Banco de Dados
     public Materiaprima materiaprima{ get; set; }
     Controles.MateriaprimaControle materiaprimaControle = new Controles.MateriaprimaControle();
+    Controles.UnidadeControle unidadeControle = new Controles.UnidadeControle();
 
     //--------------------------------------------------------------------------------------------------
 
@@ -27,7 +28,7 @@ namespace ClassesTrools.Views
     {
       Application.Current.MainPage = new Telainicial();
 
-      UnidadePicker.ItemsSource =UnidadeControle.LerTodos();
+      UnidadePicker.ItemsSource = unidadeControle.LerTodos();
       
     }
 

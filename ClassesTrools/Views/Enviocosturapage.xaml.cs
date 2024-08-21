@@ -25,7 +25,7 @@ namespace ClassesTrools.Views
 
     void VoltarClicked(object sender, EventArgs e)
     {
-      Application.Current.MainPage = new Telainicial();
+      Application.Current.MainPage = new Relatoriocosturapage();
 
       CostureiroPicker.ItemsSource =enviocosturaControle.LerTodos();
       MateriaprimaPicker.ItemsSource = enviocosturaControle.LerTodos();

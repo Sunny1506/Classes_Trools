@@ -105,6 +105,10 @@ namespace ClassesTrools.Views
       else
         return true;
     }
+    private async void ExcluirClicked(object sender, EventArgs e)
+   {
+     Application.Current.MainPage = new Listaclientespage();
+   }
 
     //--------------------------------------------------------------------------------------------------
   }

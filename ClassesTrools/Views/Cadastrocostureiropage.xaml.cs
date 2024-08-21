@@ -11,7 +11,7 @@ namespace ClassesTrools.Views
     // Esse atributo "cliente" serve para a ListaClientes informar qual Cliente foi clicado na lista.
     // Será usado para preencher as Entry's com os dados do Cliente, assim como para ser enviado para o 
     // ClienteControle que irá criar/atualizar o Banco de Dados
-    public Costureiros costureiros{ get; set; }
+    public Costureiros costureiros { get; set; }
     Controles.CostureirosControle costureirosControle = new Controles.CostureirosControle();
 
     //--------------------------------------------------------------------------------------------------
@@ -40,7 +40,7 @@ namespace ClassesTrools.Views
         IdLabel.Text = costureiros.Id.ToString();
         NomeEntry.Text = costureiros.Nome;
         TelefoneEntry.Text = costureiros.Telefone;
-      
+
 
       }
       else
@@ -54,8 +54,8 @@ namespace ClassesTrools.Views
       IdLabel.Text = string.Empty;
       NomeEntry.Text = string.Empty;
       TelefoneEntry.Text = string.Empty;
-     
-      
+
+
     }
 
     //--------------------------------------------------------------------------------------------------
@@ -65,15 +65,15 @@ namespace ClassesTrools.Views
       if (await VerificaSeDadosEstaoCorretos()) // Verifica se os dados são válidos antes de salvar no banco
       {
         // O código abaixo preenche o objeto cliente (Modelo) com os dados das Entry's
-       costureiros = new Modelos.Costureiros();
+        costureiros = new Modelos.Costureiros();
         if (!String.IsNullOrEmpty(IdLabel.Text))
-         costureiros.Id = int.Parse(IdLabel.Text);
+          costureiros.Id = int.Parse(IdLabel.Text);
         else
-        costureiros.Id = 0;
+          costureiros.Id = 0;
         costureiros.Nome = NomeEntry.Text;
-       costureiros.Telefone = TelefoneEntry.Text;
-       
-        
+        costureiros.Telefone = TelefoneEntry.Text;
+
+
 
 
         // Com o objeto preenchido enviamos para o controle para criar/atualizar no Banco de Dados
@@ -105,7 +105,10 @@ namespace ClassesTrools.Views
       else
         return true;
     }
-
+    private async void ExcluirClicked(object sender, EventArgs e)
+    {
+      Application.Current.MainPage = new Listaclientespage();
+    }
     //--------------------------------------------------------------------------------------------------
   }
 }

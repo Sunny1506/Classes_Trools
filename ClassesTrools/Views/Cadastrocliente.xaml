@@ -16,6 +16,7 @@
                              TextColor="White"
                              FontAttributes="Bold"
                              HorizontalOptions="Start"/>
+
                      <Image Source="styleroxo.png"
                             HorizontalOptions="Center"
                             HeightRequest="200"/>
@@ -56,6 +57,14 @@
 
                      <HorizontalStackLayout Spacing="20"
                                             HorizontalOptions="Center">
+                            <ImageButton Source="lixo.png"
+                                         Clicked="ExcluirClicked"
+                                         HeightRequest="40"
+                                         WidthRequest="40"
+                                         CornerRadius="10"
+                                         BackgroundColor="#cd5ff5"
+                                         Margin="10,0,0,0"
+                                         HorizontalOptions="End"/>
                             <Button Text="LIMPAR"
                                     BackgroundColor="#8A2BE2"
                                     TextColor="White"

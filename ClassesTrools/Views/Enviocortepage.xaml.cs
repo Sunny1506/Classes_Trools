@@ -13,6 +13,7 @@ namespace ClassesTrools.Views
     // ClienteControle que irá criar/atualizar o Banco de Dados
     public Enviocorte enviocorte{ get; set; }
     Controles.EnviocorteControle enviocorteControle = new Controles.EnviocorteControle();
+    Controles.MateriaprimaControle materiaprimaControle = new Controles.MateriaprimaControle();
 
     //--------------------------------------------------------------------------------------------------
 
@@ -25,10 +26,10 @@ namespace ClassesTrools.Views
 
     void VoltarClicked(object sender, EventArgs e)
     {
-      Application.Current.MainPage = new Telainicial();
+      Application.Current.MainPage = new Relatoriocortepage();
 
-      CortadorPicker.ItemsSource =CortadoresControle.LerTodos();
-      MateriaprimaPicker.ItemsSource = MateriaprimaControle.LerTodos();
+      CortadorPicker.ItemsSource = enviocorteControle.LerTodos();
+      MateriaprimaPicker.ItemsSource = materiaprimaControle.LerTodos();
     }
 
     //--------------------------------------------------------------------------------------------------

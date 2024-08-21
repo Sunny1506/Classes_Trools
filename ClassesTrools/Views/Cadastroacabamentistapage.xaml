@@ -5,7 +5,7 @@
              BackgroundColor="#DAD0E1"
              Shell.NavBarIsVisible="false">
 
-        <ScrollView>
+       <ScrollView>
               <VerticalStackLayout Padding="20"
                                    Spacing="10">
                      <Button Text="VOLTAR"
@@ -35,6 +35,13 @@
 
                      <HorizontalStackLayout Spacing="20"
                                             HorizontalOptions="Center">
+                            <ImageButton Source="lixo.png"
+                                         HeightRequest="40"
+                                         WidthRequest="40"
+                                         CornerRadius="10"
+                                         BackgroundColor="#cd5ff5"
+                                         Margin="10,0,0,0"
+                                         HorizontalOptions="End"/>
                             <Button Text="LIMPAR"
                                     BackgroundColor="#8A2BE2"
                                     TextColor="White"
@@ -48,8 +55,8 @@
               </VerticalStackLayout>
        </ScrollView>
 </ContentPage>
-        
-        <!--<ScrollView>
+
+<!--<ScrollView>
                 <StackLayout Padding="20"
                              BackgroundColor="#DAD0E1">
 

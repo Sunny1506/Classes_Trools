@@ -25,7 +25,7 @@ namespace ClassesTrools.Views
 
     void VoltarClicked(object sender, EventArgs e)
     {
-      Application.Current.MainPage = new Telainicial();
+      Application.Current.MainPage = new Relatorioacabamentopage();
 
       AcabamentistaPicker.ItemsSource =envioacabamentoControle.LerTodos();
       MateriaprimaPicker.ItemsSource = envioacabamentoControle.LerTodos();
