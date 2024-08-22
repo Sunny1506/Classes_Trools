@@ -40,6 +40,7 @@ namespace ClassesTrools.Views
         IdLabel.Text = acabamentista.Id.ToString();
         NomeEntry.Text = acabamentista.Nome;
         TelefoneEntry.Text = acabamentista.Telefone;
+        DataEntry.Text = acabamentista.Data;
       
 
       }
@@ -54,10 +55,28 @@ namespace ClassesTrools.Views
       IdLabel.Text = string.Empty;
       NomeEntry.Text = string.Empty;
       TelefoneEntry.Text = string.Empty;
+      DataEntry.Text = string.Empty;
      
       
     }
-
+     private async void OnApagarAcabamentistasClicked(object sender, EventArgs e)
+  {
+    // Verifica se estamos editando um cliente ou criando um cliente
+    // Se estiver criando, não se pode apagar, já que não se tem um `cliente.Id`
+    if (acabamentista == null || acabamentista.Id < 1)
+      await DisplayAlert("Erro", "Nenhum acabamentista para excluir", "ok");
+    else if (await DisplayAlert("Excluir","Tem certeza que deseja excluir esse acabamentista?","Excluir Acabamentista","cancelar")) // Caso o usuário tocar no Botão "Excluir Cliente"
+    {
+      // Apaga do Banco de Dados
+      acabamentistaControle.Apagar(acabamentista.Id);
+      // Volta para a tela de Lista
+      // Esse código abaixo pode ser um:
+      // await NavigationPage.PopAsync();
+      // Se você veio pra cá com um 
+      // await Navigation.PushAsync(new CadastroClientePage);
+      Application.Current.MainPage = new Listaacabamentistaspage(); 
+    }
+  }
     //--------------------------------------------------------------------------------------------------
 
     private async void OnSalvarDadosClicked(object sender, EventArgs e)
@@ -72,6 +91,7 @@ namespace ClassesTrools.Views
          acabamentista.Id = 0;
         acabamentista.Nome = NomeEntry.Text;
         acabamentista.Telefone = TelefoneEntry.Text;
+        acabamentista.Data = DataEntry.Text;
        
         
 

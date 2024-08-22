@@ -40,6 +40,7 @@ namespace ClassesTrools.Views
         IdLabel.Text = cortadores.Id.ToString();
         NomeEntry.Text = cortadores.Nome;
         TelefoneEntry.Text = cortadores.Telefone;
+        DataEntry.Text = cortadores.Data;
       
 
       }
@@ -54,10 +55,28 @@ namespace ClassesTrools.Views
       IdLabel.Text = string.Empty;
       NomeEntry.Text = string.Empty;
       TelefoneEntry.Text = string.Empty;
+       DataEntry.Text = string.Empty;
      
       
     }
-
+private async void OnApagarcortadorClicked(object sender, EventArgs e)
+  {
+    // Verifica se estamos editando um cliente ou criando um cliente
+    // Se estiver criando, não se pode apagar, já que não se tem um `cliente.Id`
+    if (cortadores == null || cortadores.Id < 1)
+      await DisplayAlert("Erro", "Nenhum cortador para excluir", "ok");
+    else if (await DisplayAlert("Excluir","Tem certeza que deseja excluir esse cortador?","Excluir cortador","cancelar")) // Caso o usuário tocar no Botão "Excluir Cliente"
+    {
+      // Apaga do Banco de Dados
+      cortadoresControle.Apagar(cortadores.Id);
+      // Volta para a tela de Lista
+      // Esse código abaixo pode ser um:
+      // await NavigationPage.PopAsync();
+      // Se você veio pra cá com um 
+      // await Navigation.PushAsync(new CadastroClientePage);
+      Application.Current.MainPage = new Listacortadorespage(); 
+    }
+  }
     //--------------------------------------------------------------------------------------------------
 
     private async void OnSalvarDadosClicked(object sender, EventArgs e)
@@ -72,6 +91,7 @@ namespace ClassesTrools.Views
          cortadores.Id = 0;
         cortadores.Nome = NomeEntry.Text;
        cortadores.Telefone = TelefoneEntry.Text;
+       cortadores.Data = DataEntry.Text;
        
         
 

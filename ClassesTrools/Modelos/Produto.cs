@@ -11,6 +11,7 @@ namespace Modelos
       public string Cor { get; set; }
 
       public string Metadiaria { get; set; }
+      public string Data { get; set; }
 
 
 

@@ -42,6 +42,7 @@ namespace ClassesTrools.Views
       {
         IdLabel.Text = enviocostura.Id.ToString();
         QuantidadeEntry.Text = enviocostura.Quantidade;
+        DataEntry.Text = enviocostura.Data;
 
       
 
@@ -56,11 +57,29 @@ namespace ClassesTrools.Views
     {
       IdLabel.Text = string.Empty;
       QuantidadeEntry.Text = string.Empty;
+      DataEntry.Text = string.Empty;
       
      
       
     }
-
+private async void OnApagarCosturaClicked(object sender, EventArgs e)
+  {
+    // Verifica se estamos editando um cliente ou criando um cliente
+    // Se estiver criando, não se pode apagar, já que não se tem um `cliente.Id`
+    if (enviocostura == null || enviocostura.Id < 1)
+      await DisplayAlert("Erro", "Nenhum envio para excluir", "ok");
+    else if (await DisplayAlert("Excluir","Tem certeza que deseja excluir esse envio?","Excluir envio","cancelar")) // Caso o usuário tocar no Botão "Excluir Cliente"
+    {
+      // Apaga do Banco de Dados
+      enviocosturaControle.Apagar(enviocostura.Id);
+      // Volta para a tela de Lista
+      // Esse código abaixo pode ser um:
+      // await NavigationPage.PopAsync();
+      // Se você veio pra cá com um 
+      // await Navigation.PushAsync(new CadastroClientePage);
+      Application.Current.MainPage = new Enviocosturapage(); 
+    }
+  }
     //--------------------------------------------------------------------------------------------------
 
     private async void OnSalvarDadosClicked(object sender, EventArgs e)
@@ -74,6 +93,8 @@ namespace ClassesTrools.Views
         else
          enviocostura.Id = 0;
         enviocostura.Quantidade = QuantidadeEntry.Text;
+         enviocostura.Data = DataEntry.Text;
+        
        
        
         

@@ -4,6 +4,7 @@ namespace Modelos
     {
         public int Id { get; set; }
        public string  Unidades { get; set; }
+       public string Data { get; set; }
 
     }
 }

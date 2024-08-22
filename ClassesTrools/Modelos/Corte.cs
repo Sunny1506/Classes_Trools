@@ -6,6 +6,7 @@ namespace Modelos
         public string Unidade { get; set; }
         public string Material { get; set; }
         public string Colaborador { get; set; }
+        public string Data { get; set; }
 
     }
 }

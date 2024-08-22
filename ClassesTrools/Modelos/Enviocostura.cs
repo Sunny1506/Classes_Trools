@@ -6,5 +6,6 @@ namespace Modelos
        public string  Costureiro { get; set; }
       public string Quantidade { get; set; }
       public string Materiaprima { get; set; }
+      public string Data { get; set; }
     }
 }

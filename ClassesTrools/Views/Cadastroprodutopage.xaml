@@ -36,26 +36,10 @@
                         <Label Text="Tamanho peças:"/>
                         <Entry Placeholder="Digite o Tamanho"
                                BackgroundColor="#f7faf8"/>
-                        <StackLayout Orientation="Horizontal">
-                                <Button Text="ESP"
-                                        Margin="10,10,10,10"/>
-                                <Button Text="PP"
-                                        Margin="10,10,10,10"/>
-                                <Button Text="P"
-                                        Margin="10,10,10,10"/>
-                                <Button Text="M"
-                                        Margin="10,10,10,10"/>
-                                <Button Text="G"
-                                        Margin="10,10,10,10"/>
-                                <Button Text="GG"
-                                        Margin="10,10,10,10"/>
-                                <Button Text="XG"
-                                        Margin="10,10,10,10"/>
-                                <Entry Placeholder="Outro:"
-                                       HorizontalOptions="FillAndExpand"
-                                       BackgroundColor="#f7faf8"
-                                       Margin="10,10,10,10"/>
-                        </StackLayout>
+                        <Entry Placeholder="Digite o Tamanho"
+                               x:Name="TamanhoEntry"
+                               BackgroundColor="#f7faf8"/>
+
                         <Label Text="Cor:"/>
                         <Entry Placeholder="Digite a cor"
                                x:Name="CorEntry"
@@ -64,10 +48,15 @@
                         <Entry Placeholder="Digite a unidade de medida"
                                x:Name="UnidadeEntry"
                                BackgroundColor="#f7faf8"/>
+                        <Label Text="Data do cadastro:"/>
+                        <Entry Placeholder="Digite a data do cadastro"
+                               x:Name="DataEntry"
+                               BackgroundColor="#f7faf8"/>
 
                         <HorizontalStackLayout Spacing="20"
                                                HorizontalOptions="Center">
                                 <ImageButton Source="lixo.png"
+                                             Clicked="OnApagarProdutosClicked"
                                              HeightRequest="40"
                                              WidthRequest="40"
                                              CornerRadius="10"

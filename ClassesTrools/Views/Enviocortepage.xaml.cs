@@ -43,6 +43,7 @@ namespace ClassesTrools.Views
       {
         IdLabel.Text = enviocorte.Id.ToString();
         QuantidadeEntry.Text = enviocorte.Quantidade;
+         DataEntry.Text = enviocorte.Data;
 
       
 
@@ -57,11 +58,30 @@ namespace ClassesTrools.Views
     {
       IdLabel.Text = string.Empty;
       QuantidadeEntry.Text = string.Empty;
+      DataEntry.Text = string.Empty;
+      
       
      
       
     }
-
+private async void OnApagarCorteClicked(object sender, EventArgs e)
+  {
+    // Verifica se estamos editando um cliente ou criando um cliente
+    // Se estiver criando, não se pode apagar, já que não se tem um `cliente.Id`
+    if (enviocorte == null || enviocorte.Id < 1)
+      await DisplayAlert("Erro", "Nenhum envio para excluir", "ok");
+    else if (await DisplayAlert("Excluir","Tem certeza que deseja excluir esse envio?","Excluir envio","cancelar")) // Caso o usuário tocar no Botão "Excluir Cliente"
+    {
+      // Apaga do Banco de Dados
+      enviocorteControle.Apagar(enviocorte.Id);
+      // Volta para a tela de Lista
+      // Esse código abaixo pode ser um:
+      // await NavigationPage.PopAsync();
+      // Se você veio pra cá com um 
+      // await Navigation.PushAsync(new CadastroClientePage);
+      Application.Current.MainPage = new Enviocortepage(); 
+    }
+  }
     //--------------------------------------------------------------------------------------------------
 
     private async void OnSalvarDadosClicked(object sender, EventArgs e)
@@ -75,6 +95,7 @@ namespace ClassesTrools.Views
         else
          enviocorte.Id = 0;
         enviocorte.Quantidade = QuantidadeEntry.Text;
+        enviocorte.Data = DataEntry.Text;
        
        
         

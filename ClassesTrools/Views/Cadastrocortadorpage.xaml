@@ -31,11 +31,15 @@
                         <Entry Placeholder="Digite o telefone"
                                x:Name="TelefoneEntry"
                                BackgroundColor="#f7faf8"/>
+                                <Label Text="Data do envio:"/>
+                     <Entry Placeholder="Digite a data do envio"
+                            x:Name="DataEntry"
+                            BackgroundColor="#f7faf8"/>
 
                         <HorizontalStackLayout Spacing="20"
                                                HorizontalOptions="Center">
                                 <ImageButton Source="lixo.png"
-                                             Clicked="ExcluirClicked"
+                                             Clicked="OnApagarcortadorClicked"
                                              HeightRequest="40"
                                              WidthRequest="40"
                                              CornerRadius="10"

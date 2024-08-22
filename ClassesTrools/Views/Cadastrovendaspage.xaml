@@ -21,15 +21,19 @@
                             FontSize="30"
                             HorizontalOptions="Center"
                             Margin="0,20,0,20"/>
-                            <Label Text="ID:"/>
-                        <Label x:Name="IdLabel"/>
+                     <Label Text="ID:"/>
+                     <Label x:Name="IdLabel"/>
                      <Entry x:Name="ClienteEntry"
-                     Placeholder="NOME DO CLIENTE / EMPRESA*"
+                            Placeholder="NOME DO CLIENTE / EMPRESA*"
                             Margin="0,0,0,20"
                             BackgroundColor="#f7faf8"/>
                      <Entry x:Name="ProdutoEntry"
-                     Placeholder="PRODUTO"
+                            Placeholder="PRODUTO"
                             Margin="0,0,0,20"
+                            BackgroundColor="#f7faf8"/>
+                     <Label Text="Data do cadastro:"/>
+                     <Entry Placeholder="Digite a data do cadastro"
+                            x:Name="DataEntry"
                             BackgroundColor="#f7faf8"/>
 
                      <Grid Margin="0,0,0,20">
@@ -38,11 +42,11 @@
                                    <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <Entry x:Name="ValorEntry"
-                             Placeholder="VALOR"
+                                   Placeholder="VALOR"
                                    Grid.Column="0"
                                    BackgroundColor="#f7faf8"/>
                             <Entry x:Name="DescontoEntry"
-                             Placeholder="DESCONTO"
+                                   Placeholder="DESCONTO"
                                    Grid.Column="1"
                                    Margin="10,0,0,0"
                                    BackgroundColor="#f7faf8"/>
@@ -56,13 +60,14 @@
 
                      <HorizontalStackLayout Spacing="20"
                                             HorizontalOptions="Center">
-                                             <ImageButton Source="lixo.png"
-                                             HeightRequest="40"
-                                             WidthRequest="40"
-                                             CornerRadius="10"
-                                             BackgroundColor="#cd5ff5"
-                                             Margin="10,0,0,0"
-                                             HorizontalOptions="End"/>
+                            <ImageButton Source="lixo.png"
+                                         Clicked="OnApagarvendaClicked"
+                                         HeightRequest="40"
+                                         WidthRequest="40"
+                                         CornerRadius="10"
+                                         BackgroundColor="#cd5ff5"
+                                         Margin="10,0,0,0"
+                                         HorizontalOptions="End"/>
                             <Button Text="LIMPAR"
                                     BackgroundColor="#8A2BE2"
                                     TextColor="White"

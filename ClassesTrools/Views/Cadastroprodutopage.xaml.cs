@@ -41,7 +41,9 @@ namespace ClassesTrools.Views
         NomeEntry.Text = produtos.Nome;
         NomedoprodutoEntry.Text = produtos.Nomedoproduto;
       UnidadeEntry.Text = produtos.Unidade;
+      TamanhoEntry.Text = produtos.Tamanho;
         CorEntry.Text = produtos.Cor;
+         DataEntry.Text = produtos.Data;
 
       }
       else
@@ -57,8 +59,28 @@ namespace ClassesTrools.Views
       NomedoprodutoEntry.Text = string.Empty;
       UnidadeEntry.Text = string.Empty;
       CorEntry.Text = string.Empty;
+      TamanhoEntry.Text = string.Empty;
+      DataEntry.Text = string.Empty;
       
     }
+    private async void OnApagarProdutosClicked(object sender, EventArgs e)
+  {
+    // Verifica se estamos editando um cliente ou criando um cliente
+    // Se estiver criando, não se pode apagar, já que não se tem um `cliente.Id`
+    if (produtos == null || produtos.Id < 1)
+      await DisplayAlert("Erro", "Nenhum produto para excluir", "ok");
+    else if (await DisplayAlert("Excluir","Tem certeza que deseja excluir esse produto?","Excluir Produto","cancelar")) // Caso o usuário tocar no Botão "Excluir Cliente"
+    {
+      // Apaga do Banco de Dados
+      produtoControle.Apagar(produtos.Id);
+      // Volta para a tela de Lista
+      // Esse código abaixo pode ser um:
+      // await NavigationPage.PopAsync();
+      // Se você veio pra cá com um 
+      // await Navigation.PushAsync(new CadastroClientePage);
+      Application.Current.MainPage = new Listaprodutospage(); 
+    }
+  }
 
     //--------------------------------------------------------------------------------------------------
 
@@ -76,6 +98,8 @@ namespace ClassesTrools.Views
         produtos.Nomedoproduto = NomedoprodutoEntry.Text;
         produtos.Unidade = UnidadeEntry.Text;
         produtos.Cor = CorEntry.Text;
+        produtos.Tamanho = TamanhoEntry.Text;
+        produtos.Data = DataEntry.Text;
         
 
 

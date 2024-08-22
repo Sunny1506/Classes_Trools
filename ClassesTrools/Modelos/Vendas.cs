@@ -8,6 +8,7 @@ namespace Modelos
       public string Cliente { get; set; }
       public string Produto { get; set; }
       public string Desconto { get; set; }
+      public string Data { get; set; }
 
    }
 }

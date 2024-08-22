@@ -15,6 +15,7 @@ namespace Modelos
       public string Email { get; set; }
 
       public string CEP { get; set; }
+      public string Data { get; set; }
 
 
 

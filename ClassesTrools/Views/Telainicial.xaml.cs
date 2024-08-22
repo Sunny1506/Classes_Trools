@@ -32,12 +32,6 @@ namespace ClassesTrools.Views
             Application.Current.MainPage = new Materiaprimapage();
 
         }
-         private void ButtonRelatoriosButtonClicked(object sender, EventArgs args)
-        {
-
-            Application.Current.MainPage = new Relatoriospage();
-
-        }
         private void ButtonEnviocorteButtonClicked(object sender, EventArgs args)
         {
 

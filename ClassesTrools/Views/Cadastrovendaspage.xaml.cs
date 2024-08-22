@@ -42,6 +42,7 @@ namespace ClassesTrools.Views
         ProdutoEntry.Text = vendas.Produto;
         ValorEntry.Text = vendas.Valor;
         DescontoEntry.Text = vendas.Desconto;
+        DataEntry.Text = vendas.Data;
       }
       else
         IdLabel.Text = "0";
@@ -56,9 +57,28 @@ namespace ClassesTrools.Views
      ProdutoEntry.Text = string.Empty;
      ValorEntry.Text = string.Empty;
     DescontoEntry.Text  = string.Empty;
+    DataEntry.Text = string.Empty;
      
       
     }
+     private async void OnApagarvendaClicked(object sender, EventArgs e)
+  {
+    // Verifica se estamos editando um cliente ou criando um cliente
+    // Se estiver criando, não se pode apagar, já que não se tem um `cliente.Id`
+    if (vendas == null || vendas.Id < 1)
+      await DisplayAlert("Erro", "Nenhuma venda para excluir", "ok");
+    else if (await DisplayAlert("Excluir","Tem certeza que deseja excluir essa venda?","Excluir venda","cancelar")) // Caso o usuário tocar no Botão "Excluir Cliente"
+    {
+      // Apaga do Banco de Dados
+      vendasControle.Apagar(vendas.Id);
+      // Volta para a tela de Lista
+      // Esse código abaixo pode ser um:
+      // await NavigationPage.PopAsync();
+      // Se você veio pra cá com um 
+      // await Navigation.PushAsync(new CadastroClientePage);
+      Application.Current.MainPage = new Relatoriovendaspage(); 
+    }
+  }
 
     //--------------------------------------------------------------------------------------------------
 
@@ -76,6 +96,9 @@ namespace ClassesTrools.Views
        vendas.Produto = ProdutoEntry.Text;
        vendas.Valor = ValorEntry.Text;
        vendas.Desconto = DescontoEntry.Text;
+       vendas.Data = DataEntry.Text;
+       vendas.Data = DataEntry.Text;
+       
        
         
 

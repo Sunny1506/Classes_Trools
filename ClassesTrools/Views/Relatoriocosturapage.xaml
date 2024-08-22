@@ -36,18 +36,21 @@
                 <DataTemplate>
                     <ViewCell>
                         <VerticalStackLayout Padding="20"
-                                             Margin="10,10,10,10"
-                                             BackgroundColor="#f3e1fc">
-                            <HorizontalStackLayout>
-                                <Label Text="{Binding Nome}"
-                                       FontSize="20"/>
-                                <Label Text="{Binding Sobrenome}"
-                                       FontSize="20"
-                                       Margin="10,0,0,0"/>
-                            </HorizontalStackLayout>
-                            <Label Text="{Binding Telefone}"
-                                   FontSize="20"/>
-                        </VerticalStackLayout>
+                                                               Margin="10,10,10,10"
+                                                               BackgroundColor="#f3e1fc">
+                                                 <HorizontalStackLayout>
+                                                       <Label Text="{Binding Id}"
+                                                               Margin="10,10,10,10"
+                                                               FontSize="20"/>
+                                                        <Label Text="{Binding Colaborador}"
+                                                               Margin="10,10,10,10"
+                                                               FontSize="20"/>
+                                                        <Label Text="{Binding Data}"
+                                                               FontSize="20"
+                                                               Margin="10,10,10,10"/>
+
+                                                 </HorizontalStackLayout>
+                                          </VerticalStackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

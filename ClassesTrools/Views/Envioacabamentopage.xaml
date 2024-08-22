@@ -51,6 +51,10 @@
             <Entry x:Name="QuantidadeEntry"
                    BackgroundColor="White"
                    Margin="0,0,0,20"/>
+            <Label Text="Data do cadastro:"/>
+            <Entry Placeholder="Digite a data do cadastro"
+                   x:Name="DataEntry"
+                   BackgroundColor="#f7faf8"/>
 
 
             <HorizontalStackLayout Spacing="20"

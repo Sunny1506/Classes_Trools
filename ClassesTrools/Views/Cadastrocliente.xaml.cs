@@ -44,7 +44,8 @@ namespace ClassesTrools.Views
         CidadeEntry.Text = clientes.Cidade;
         EmailEntry.Text = clientes.Email;
         EstadoEntry.Text = clientes.Estado;
-        EndereçoEntry.Text = clientes.Endereço;
+        EndereçoEntry.Text = clientes.Endereço; 
+        DataEntry.Text = clientes.Data;
       }
       else
         IdLabel.Text = "0";
@@ -61,8 +62,26 @@ namespace ClassesTrools.Views
       CidadeEntry.Text = string.Empty;
       EmailEntry.Text = string.Empty;
       EstadoEntry.Text = string.Empty;
+      DataEntry.Text = string.Empty;
     }
-
+ private async void OnApagarClienteClicked(object sender, EventArgs e)
+  {
+    // Verifica se estamos editando um cliente ou criando um cliente
+    // Se estiver criando, não se pode apagar, já que não se tem um `cliente.Id`
+    if (clientes == null || clientes.Id < 1)
+      await DisplayAlert("Erro", "Nenhum cliente para excluir", "ok");
+    else if (await DisplayAlert("Excluir","Tem certeza que deseja excluir esse cliente?","Excluir Cliente","cancelar")) // Caso o usuário tocar no Botão "Excluir Cliente"
+    {
+      // Apaga do Banco de Dados
+      clientesControle.Apagar(clientes.Id);
+      // Volta para a tela de Lista
+      // Esse código abaixo pode ser um:
+      // await NavigationPage.PopAsync();
+      // Se você veio pra cá com um 
+      // await Navigation.PushAsync(new CadastroClientePage);
+      Application.Current.MainPage = new Listaclientespage(); 
+    }
+  }
     //--------------------------------------------------------------------------------------------------
 
     private async void OnSalvarDadosClicked(object sender, EventArgs e)
@@ -82,6 +101,7 @@ namespace ClassesTrools.Views
         clientes.Email = EmailEntry.Text;
         clientes.Estado = EstadoEntry.Text;
         clientes.Endereço = EndereçoEntry.Text;
+        clientes.Data = DataEntry.Text;
 
 
         // Com o objeto preenchido enviamos para o controle para criar/atualizar no Banco de Dados

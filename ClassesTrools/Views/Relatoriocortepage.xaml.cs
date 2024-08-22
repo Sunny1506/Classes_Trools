@@ -39,7 +39,7 @@ public partial class Relatoriocortepage
   private void ButtonVoltarButtonClicked(object sender, EventArgs args)
         {
 
-            Application.Current.MainPage = new Relatoriocortepage();
+            Application.Current.MainPage = new Telainicial();
 
         }
 }

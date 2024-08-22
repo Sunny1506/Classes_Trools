@@ -35,18 +35,24 @@
                      <ListView.ItemTemplate>
                             <DataTemplate>
                                    <ViewCell>
-                                          <VerticalStackLayout Padding="20"
+                                         <VerticalStackLayout Padding="20"
                                                                Margin="10,10,10,10"
                                                                BackgroundColor="#f3e1fc">
                                                  <HorizontalStackLayout>
-                                                        <Label Text="{Binding Nome}"
+                                                  <Label Text="{Binding Id}"
+                                                               Margin="10,10,10,10"
                                                                FontSize="20"/>
-                                                        <Label Text="{Binding Sobrenome}"
+                                                        <Label Text="{Binding Nome}"
+                                                               Margin="10,10,10,10"
+                                                               FontSize="20"/>
+                                                        <Label Text="{Binding Telefone}"
+                                                               Margin="10,10,10,10"
+                                                               FontSize="20"/>
+                                                        <Label Text="{Binding Data}"
                                                                FontSize="20"
-                                                               Margin="10,0,0,0"/>
+                                                               Margin="10,10,10,10"/>
+
                                                  </HorizontalStackLayout>
-                                                 <Label Text="{Binding Telefone}"
-                                                        FontSize="20"/>
                                           </VerticalStackLayout>
                                    </ViewCell>
                             </DataTemplate>
