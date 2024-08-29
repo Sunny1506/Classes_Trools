@@ -37,7 +37,7 @@
                     <ViewCell>
                         <VerticalStackLayout Padding="20"
                                                                Margin="10,10,10,10"
-                                                               BackgroundColor="#f3e1fc">
+                                                               BackgroundColor="#cbb0d4">
                                                  <HorizontalStackLayout>
                                                        <Label Text="{Binding Id}"
                                                                Margin="10,10,10,10"

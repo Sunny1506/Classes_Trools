@@ -20,7 +20,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>ClassesTrools</ApplicationTitle>
+		<ApplicationTitle>Stitch Tech</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.classestrools</ApplicationId>
@@ -39,10 +39,10 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\appicon.png" BaseSize="1800,1800"   />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\splash.png" Color="#8f5bbd" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />

@@ -35,12 +35,14 @@
 
             <Picker
                 x:Name="CortadorPicker"
+                ItemDisplayBinding="{Binding Nome}"
                 Title="CORTADOR"
                 BackgroundColor="White"
                 Margin="0,0,0,20">
             </Picker>
 
             <Picker x:Name="MateriaprimaPicker"
+                    ItemDisplayBinding="{Binding Material}"
                     Title="MATÉRIA PRIMA"
                     BackgroundColor="White"
                     Margin="0,0,0,20">

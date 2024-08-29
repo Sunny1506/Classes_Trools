@@ -20,6 +20,7 @@ namespace ClassesTrools.Views
     public Materiaprimapage()
     {
       InitializeComponent();
+      UnidadePicker.ItemsSource = Unidades.LerTodos();
     }
 
     //--------------------------------------------------------------------------------------------------
@@ -28,7 +29,7 @@ namespace ClassesTrools.Views
     {
       Application.Current.MainPage = new Telainicial();
 
-      UnidadePicker.ItemsSource = Unidades.LerTodos();
+      
       
     }
 

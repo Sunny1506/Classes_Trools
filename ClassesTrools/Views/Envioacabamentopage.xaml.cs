@@ -13,12 +13,18 @@ namespace ClassesTrools.Views
     // ClienteControle que irá criar/atualizar o Banco de Dados
     public Envioacabamento envioacabamento{ get; set; }
     Controles.EnvioacabamentoControle envioacabamentoControle = new Controles.EnvioacabamentoControle();
+    Controles.MateriaprimaControle materiaprimaControle = new Controles.MateriaprimaControle();
+    Controles.AcabamentistaControle acabamentistaControle = new Controles.AcabamentistaControle();
+
 
     //--------------------------------------------------------------------------------------------------
 
     public Envioacabamentopage()
     {
       InitializeComponent();
+      AcabamentistaPicker.ItemsSource =envioacabamentoControle.LerTodos();
+      MateriaprimaPicker.ItemsSource = materiaprimaControle.LerTodos();
+      AcabamentistaPicker.ItemsSource = acabamentistaControle.LerTodos();
     }
 
     //--------------------------------------------------------------------------------------------------
@@ -27,8 +33,7 @@ namespace ClassesTrools.Views
     {
       Application.Current.MainPage = new Relatorioacabamentopage();
 
-      AcabamentistaPicker.ItemsSource =envioacabamentoControle.LerTodos();
-      MateriaprimaPicker.ItemsSource = envioacabamentoControle.LerTodos();
+      
     }
 
     //--------------------------------------------------------------------------------------------------

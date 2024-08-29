@@ -6,75 +6,80 @@
              Title="Cadastro de Produto"
              Shell.NavBarIsVisible="false">
 
-        <ScrollView>
-                <VerticalStackLayout Padding="20"
-                                     Spacing="10">
-                        <Button Text="VOLTAR"
-                                Clicked="VoltarClicked"
-                                BackgroundColor="#8A2BE2"
-                                Margin="10,10,10,10"
-                                TextColor="White"
-                                FontAttributes="Bold"
-                                HorizontalOptions="Start"/>
-                        <Image Source="styleroxo.png"
-                               HorizontalOptions="Center"
-                               HeightRequest="200"/>
-                        <Label Text="CADASTRO DE PRODUTOS"
-                               FontSize="30"
-                               HorizontalOptions="Center"
-                               Margin="0,20,0,20"/>
-                        <Label Text="ID:"/>
-                        <Label x:Name="IdLabel"/>
-                        <Label Text="Nome:"/>
-                        <Entry Placeholder="Digite o Nome"
-                               x:Name="NomeEntry"
-                               BackgroundColor="#f7faf8"/>
-                        <Label Text="Nome do produto:"/>
-                        <Entry Placeholder="Digite o nome do produto"
-                               x:Name="NomedoprodutoEntry"
-                               BackgroundColor="#f7faf8"/>
-                        <Label Text="Tamanho peças:"/>
-                        <Entry Placeholder="Digite o Tamanho"
-                               BackgroundColor="#f7faf8"/>
-                        <Entry Placeholder="Digite o Tamanho"
-                               x:Name="TamanhoEntry"
-                               BackgroundColor="#f7faf8"/>
+       <ScrollView>
+              <VerticalStackLayout Padding="20"
+                                   Spacing="10">
+                     <Button Text="VOLTAR"
+                             Clicked="VoltarClicked"
+                             BackgroundColor="#8A2BE2"
+                             Margin="10,10,10,10"
+                             TextColor="White"
+                             FontAttributes="Bold"
+                             HorizontalOptions="Start"/>
+                     <Image Source="styleroxo.png"
+                            HorizontalOptions="Center"
+                            HeightRequest="200"/>
+                     <Label Text="CADASTRO DE PRODUTOS"
+                            FontSize="30"
+                            HorizontalOptions="Center"
+                            Margin="0,20,0,20"/>
+                     <Label Text="ID:"/>
+                     <Label x:Name="IdLabel"/>
+                     <Label Text="Nome:"/>
+                     <Entry Placeholder="Digite o Nome"
+                            x:Name="NomeEntry"
+                            BackgroundColor="#f7faf8"/>
+                     <Label Text="Nome do produto:"/>
+                     <Entry Placeholder="Digite o nome do produto"
+                            x:Name="NomedoprodutoEntry"
+                            BackgroundColor="#f7faf8"/>
+                     <Label Text="Tamanho peças:"/>
+                     <Entry Placeholder="Digite o Tamanho"
+                            BackgroundColor="#f7faf8"/>
+                     <Entry Placeholder="Digite o Tamanho"
+                            x:Name="TamanhoEntry"
+                            BackgroundColor="#f7faf8"/>
 
-                        <Label Text="Cor:"/>
-                        <Entry Placeholder="Digite a cor"
-                               x:Name="CorEntry"
-                               BackgroundColor="#f7faf8"/>
-                        <Label Text="Unidade:"/>
-                        <Entry Placeholder="Digite a unidade de medida"
-                               x:Name="UnidadeEntry"
-                               BackgroundColor="#f7faf8"/>
-                        <Label Text="Data do cadastro:"/>
-                        <Entry Placeholder="Digite a data do cadastro"
-                               x:Name="DataEntry"
-                               BackgroundColor="#f7faf8"/>
+                     <Label Text="Cor:"/>
+                     <Entry Placeholder="Digite a cor"
+                            x:Name="CorEntry"
+                            BackgroundColor="#f7faf8"/>
+                     <Label Text="Unidade:"/>
+                     <Picker
+                            x:Name="UnidadePicker"
+                            ItemDisplayBinding="{Binding Unidades}"
+                            Title="UNIDADE"
+                            BackgroundColor="White"
+                            Margin="0,0,0,20">
+                     </Picker>
 
-                        <HorizontalStackLayout Spacing="20"
-                                               HorizontalOptions="Center">
-                                <ImageButton Source="lixo.png"
-                                             Clicked="OnApagarProdutosClicked"
-                                             HeightRequest="40"
-                                             WidthRequest="40"
-                                             CornerRadius="10"
-                                             BackgroundColor="#cd5ff5"
-                                             Margin="10,0,0,0"
-                                             HorizontalOptions="End"/>
-                                <Button Text="LIMPAR"
-                                        BackgroundColor="#8A2BE2"
-                                        TextColor="White"
-                                        Clicked="OnApagarDadosClicked"/>
-                                <Button Text="SALVAR DADOS"
-                                        BackgroundColor="#cd5ff5"
-                                        TextColor="White"
-                                        Margin="10,0,0,0"
-                                        Clicked="OnSalvarDadosClicked"/>
-                        </HorizontalStackLayout>
-                </VerticalStackLayout>
-        </ScrollView>
+                     <Label Text="Data do cadastro:"/>
+                     <Entry Placeholder="Digite a data do cadastro"
+                            x:Name="DataEntry"
+                            BackgroundColor="#f7faf8"/>
+
+                     <HorizontalStackLayout Spacing="20"
+                                            HorizontalOptions="Center">
+                            <ImageButton Source="lixo.png"
+                                         Clicked="OnApagarProdutosClicked"
+                                         HeightRequest="40"
+                                         WidthRequest="40"
+                                         CornerRadius="10"
+                                         BackgroundColor="#cd5ff5"
+                                         Margin="10,0,0,0"
+                                         HorizontalOptions="End"/>
+                            <Button Text="LIMPAR"
+                                    BackgroundColor="#8A2BE2"
+                                    TextColor="White"
+                                    Clicked="OnApagarDadosClicked"/>
+                            <Button Text="SALVAR DADOS"
+                                    BackgroundColor="#cd5ff5"
+                                    TextColor="White"
+                                    Margin="10,0,0,0"
+                                    Clicked="OnSalvarDadosClicked"/>
+                     </HorizontalStackLayout>
+              </VerticalStackLayout>
+       </ScrollView>
 </ContentPage>
 
 

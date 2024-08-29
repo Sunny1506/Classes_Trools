@@ -14,12 +14,15 @@ namespace ClassesTrools.Views
     public Enviocorte enviocorte{ get; set; }
     Controles.EnviocorteControle enviocorteControle = new Controles.EnviocorteControle();
     Controles.MateriaprimaControle materiaprimaControle = new Controles.MateriaprimaControle();
+    Controles.CortadoresControle cortadoresControle = new Controles.CortadoresControle();
 
     //--------------------------------------------------------------------------------------------------
 
     public Enviocortepage()
     {
       InitializeComponent();
+      CortadorPicker.ItemsSource = cortadoresControle.LerTodos();
+      MateriaprimaPicker.ItemsSource = materiaprimaControle.LerTodos();
     }
 
     //--------------------------------------------------------------------------------------------------
@@ -28,8 +31,7 @@ namespace ClassesTrools.Views
     {
       Application.Current.MainPage = new Relatoriocortepage();
 
-      CortadorPicker.ItemsSource = enviocorteControle.LerTodos();
-      MateriaprimaPicker.ItemsSource = materiaprimaControle.LerTodos();
+      
     }
 
     //--------------------------------------------------------------------------------------------------

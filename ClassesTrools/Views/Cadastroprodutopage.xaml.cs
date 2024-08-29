@@ -13,12 +13,14 @@ namespace ClassesTrools.Views
     // ClienteControle que irá criar/atualizar o Banco de Dados
     public Produto produtos { get; set; }
     Controles.ProdutoControle produtoControle = new Controles.ProdutoControle();
+    Controles.UnidadeControle Unidades = new Controles.UnidadeControle();
 
     //--------------------------------------------------------------------------------------------------
 
     public Cadastroprodutopage()
     {
       InitializeComponent();
+       UnidadePicker.ItemsSource = Unidades.LerTodos();
     }
 
     //--------------------------------------------------------------------------------------------------
@@ -40,7 +42,6 @@ namespace ClassesTrools.Views
         IdLabel.Text = produtos.Id.ToString();
         NomeEntry.Text = produtos.Nome;
         NomedoprodutoEntry.Text = produtos.Nomedoproduto;
-      UnidadeEntry.Text = produtos.Unidade;
       TamanhoEntry.Text = produtos.Tamanho;
         CorEntry.Text = produtos.Cor;
          DataEntry.Text = produtos.Data;
@@ -57,7 +58,6 @@ namespace ClassesTrools.Views
       IdLabel.Text = string.Empty;
       NomeEntry.Text = string.Empty;
       NomedoprodutoEntry.Text = string.Empty;
-      UnidadeEntry.Text = string.Empty;
       CorEntry.Text = string.Empty;
       TamanhoEntry.Text = string.Empty;
       DataEntry.Text = string.Empty;
@@ -96,7 +96,6 @@ namespace ClassesTrools.Views
           produtos.Id = 0;
         produtos.Nome = NomeEntry.Text;
         produtos.Nomedoproduto = NomedoprodutoEntry.Text;
-        produtos.Unidade = UnidadeEntry.Text;
         produtos.Cor = CorEntry.Text;
         produtos.Tamanho = TamanhoEntry.Text;
         produtos.Data = DataEntry.Text;
@@ -128,12 +127,7 @@ namespace ClassesTrools.Views
         await DisplayAlert("Cadastrar", "O campo Sobrenome é obrigatório", "OK");
         return false;
       }
-      // Verifica se a Entry do Telefone está vazia
-      else if (String.IsNullOrEmpty(UnidadeEntry.Text))
-      {
-        await DisplayAlert("Cadastrar", "O campo Telefone é obrigatório", "OK");
-        return false;
-      }
+      
       else
         return true;
     }

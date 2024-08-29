@@ -13,12 +13,17 @@ namespace ClassesTrools.Views
     // ClienteControle que irá criar/atualizar o Banco de Dados
     public Enviocostura enviocostura{ get; set; }
     Controles.EnviocosturaControle enviocosturaControle = new Controles.EnviocosturaControle();
+    Controles.MateriaprimaControle materiaprimaControle = new Controles.MateriaprimaControle();
+    Controles.CostureirosControle costureirosControle = new Controles.CostureirosControle();
 
     //--------------------------------------------------------------------------------------------------
 
     public Enviocosturapage()
     {
       InitializeComponent();
+      CostureiroPicker.ItemsSource =enviocosturaControle.LerTodos();
+      MateriaprimaPicker.ItemsSource = materiaprimaControle.LerTodos();
+      CostureiroPicker.ItemsSource = costureirosControle.LerTodos();
     }
 
     //--------------------------------------------------------------------------------------------------
@@ -27,8 +32,7 @@ namespace ClassesTrools.Views
     {
       Application.Current.MainPage = new Relatoriocosturapage();
 
-      CostureiroPicker.ItemsSource =enviocosturaControle.LerTodos();
-      MateriaprimaPicker.ItemsSource = enviocosturaControle.LerTodos();
+      
     }
 
     //--------------------------------------------------------------------------------------------------
